@@ -74,6 +74,14 @@ $(document).ready(function () {
         }
     });
 
+    $("#logout-btn").on("click", function (event) {
+        firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+        }).catch(function (error) {
+            // An error happened.
+        });
+    });
+
     /******************************
     SEMANTIC FORM - VALIDATION?
     ******************************/
