@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add Entry</title>
+
+    <!-- STYLESHEETS: SEMANTIC UI, GOOGLE FONTS, CUSTOM -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
+    <link rel="stylesheet" href="add-entry_overview.css" />
+  </head>
+
+  <body class="site">
+    <!-- NAVIGATION -->
+    <div class="ui secondary pointing menu">
+      <div class="right menu">
+        <a class="item">
+          Home
+        </a>
+        <a class="active item">
+          Add Entry
+        </a>
+        <a class="item">
+          Overview
+        </a>
+        <a class="item">
+          Discover
+        </a>
+        <a class="ui item" id="logout-btn">
+          Logout
+        </a>
+      </div>
+    </div>
+
+    <main class="site-content">
+      <!-- DATE -->
+      <div class="summary">
+        <h3 class="selected-date">Date <span id="display-date"></span></h3>
+        <!-- QUESTION ANSWERS -->
+        <div id="question-answers">
+          <div id="answer-1">
+            Answer Answer Answer Answer Answer Answer Answer
+          </div>
+          <div id="answer-2">
+            Answer Answer Answer Answer Answer Answer Answer
+          </div>
+          <div id="answer-3">
+            Answer Answer Answer Answer Answer Answer Answer
+          </div>
+        </div>
+
+        <!-- COMMENTS -->
+        <div id="display-comments">
+          Comments Comments Comments Comments Comments Comments Comments
+          Comments Comments Comments Comments Comments Comments Comments
+          Comments
+        </div>
+      </div>
+    </main>
+
+    <!-- GRAPH -->
+    <footer id="graph"></footer>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <!-- JAVASCRIPT, JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="add-entry_overview.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary {
+  margin: auto;
+  width: 70vw;
+}
+
+#graph {
+  border-top: 2px solid #22242615;
+  height: 10vw;
+}
+
+.summary {
+  border: 2px solid #22242615;
+  border-radius: 1.5rem;
+  padding: 3rem;
+}
