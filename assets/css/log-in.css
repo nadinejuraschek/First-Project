@@ -43,3 +43,27 @@ body > .grid {
 #signup-btn {
   margin-left: 8px;
 }
+
+/******************************
+FORM VALIDATION
+******************************/
+#error-message p {
+  text-align: left;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: #389e6b;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}

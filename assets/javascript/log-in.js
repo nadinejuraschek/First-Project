@@ -81,34 +81,65 @@ $(document).ready(function () {
             // An error happened.
         });
     });
-
     /******************************
-    SEMANTIC FORM - VALIDATION?
+    FORM VALIDATION
     ******************************/
-    // $('.ui.form').form({
-    //     fields: {
-    //         email: {
-    //           identifier  : 'email',
-    //           rules: [{
-    //               type   : 'empty',
-    //               prompt : 'Please enter your e-mail'
-    //             },
-    //             {
-    //               type   : 'email',
-    //               prompt : 'Please enter a valid e-mail'
-    //             }]
-    //         },
-    //         password: {
-    //           identifier  : 'password',
-    //           rules: [{
-    //               type   : 'empty',
-    //               prompt : 'Please enter your password'
-    //             },
-    //             {
-    //               type   : 'length[6]',
-    //               prompt : 'Your password must be at least 6 characters'
-    //             }]
-    //         }
-    //     }
-    // });
+    // Email
+    
+    
+    // Password
+    var myInput = $("#password-input");
+    var letter = $("#letter");
+    var capital = $("#capital");
+    var number = $("#number");
+    var length = $("#length");
+
+    // password message box displays when input field is clicked
+    myInput.focus(function() {
+    $("#error-message").css("display", "block");
+    });
+
+    // password message box is hidden when user clicks outside input field
+    myInput.blur(function() {
+    $("#error-message").css("display", "none");
+    });
+
+    // validates input
+    myInput.keyup(function() {
+        // validates lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if(myInput.val().match(lowerCaseLetters)) {
+            letter.removeClass("invalid");
+            letter.addClass("valid");
+        } else {
+            letter.removeClass("valid");
+            letter.addClass("invalid");
+        }
+        // validates capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if(myInput.val().match(upperCaseLetters)) {
+            capital.removeClass("invalid");
+            capital.addClass("valid");
+        } else {
+            capital.removeClass("valid");
+            capital.addClass("invalid");
+        }
+        // validates numbers
+        var numbers = /[0-9]/g;
+        if(myInput.val().match(numbers)) {
+            number.removeClass("invalid");
+            number.addClass("valid");
+        } else {
+            number.removeClass("valid");
+            number.addClass("invalid");
+        }
+        // validates length
+        if(myInput.val().length >= 8) {
+            length.removeClass("invalid");
+            length.addClass("valid");
+        } else {
+            length.removeClass("valid");
+            length.addClass("invalid");
+        }
+    });
 });

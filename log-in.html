@@ -58,7 +58,20 @@
             </button>
           </div>
 
-          <div class="ui error message" id="error-message"></div>
+          <!-- ERROR MESSAGES -->
+          <div id="error-message" class="ui error message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">
+              A <strong>lowercase</strong> letter
+            </p>
+            <p id="capital" class="invalid">
+              A <strong>capital (uppercase)</strong> letter
+            </p>
+            <p id="number" class="invalid">A <strong>number</strong></p>
+            <p id="length" class="invalid">
+              Minimum <strong>8 characters</strong>
+            </p>
+          </div>
         </form>
 
         <div class="ui message">
