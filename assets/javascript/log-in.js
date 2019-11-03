@@ -85,30 +85,37 @@ $(document).ready(function () {
     FORM VALIDATION
     ******************************/
     // Email
-    
+    var emailInput = $("#email-input");
+
+    // validates input
+    // function validateEmail() {
+    //     var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+    //   var validEmail = regEx.test(email);
+    //   console.log(validEmail);
+    //   if (!validEmail) {
+    //     $("#email-error-message").css("display", "block");;
+    //   }
+    // }
     
     // Password
-    var myInput = $("#password-input");
+    var passwordInput = $("#password-input");
     var letter = $("#letter");
     var capital = $("#capital");
     var number = $("#number");
     var length = $("#length");
-
     // password message box displays when input field is clicked
-    myInput.focus(function() {
-    $("#error-message").css("display", "block");
+    passwordInput.focus(function() {
+    $("#password-error-message").css("display", "block");
     });
-
     // password message box is hidden when user clicks outside input field
-    myInput.blur(function() {
-    $("#error-message").css("display", "none");
+    passwordInput.blur(function() {
+    $("#password-error-message").css("display", "none");
     });
-
     // validates input
-    myInput.keyup(function() {
+    passwordInput.keyup(function() {
         // validates lowercase letters
         var lowerCaseLetters = /[a-z]/g;
-        if(myInput.val().match(lowerCaseLetters)) {
+        if(passwordInput.val().match(lowerCaseLetters)) {
             letter.removeClass("invalid");
             letter.addClass("valid");
         } else {
@@ -117,7 +124,7 @@ $(document).ready(function () {
         }
         // validates capital letters
         var upperCaseLetters = /[A-Z]/g;
-        if(myInput.val().match(upperCaseLetters)) {
+        if(passwordInput.val().match(upperCaseLetters)) {
             capital.removeClass("invalid");
             capital.addClass("valid");
         } else {
@@ -126,7 +133,7 @@ $(document).ready(function () {
         }
         // validates numbers
         var numbers = /[0-9]/g;
-        if(myInput.val().match(numbers)) {
+        if(passwordInput.val().match(numbers)) {
             number.removeClass("invalid");
             number.addClass("valid");
         } else {
@@ -134,7 +141,7 @@ $(document).ready(function () {
             number.addClass("invalid");
         }
         // validates length
-        if(myInput.val().length >= 8) {
+        if(passwordInput.val().length >= 8) {
             length.removeClass("invalid");
             length.addClass("valid");
         } else {

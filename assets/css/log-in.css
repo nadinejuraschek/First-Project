@@ -47,7 +47,7 @@ body > .grid {
 /******************************
 FORM VALIDATION
 ******************************/
-#error-message p {
+#password-error-message p {
   text-align: left;
 }
 
