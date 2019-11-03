@@ -1,0 +1,28 @@
+.music {
+    background: url(https://cdn.pixabay.com/photo/2019/04/13/20/51/music-background-4125573_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+.option:hover 
+{
+     color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+     border: 3px solid black;
+     border-radius: 5px;
+     padding: 4px;
+}
+
+.quote{
+    background: url(https://images.unsplash.com/photo-1564352969556-5825e542fa6b?ixlib=rb-1.2.1&w=1000&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
