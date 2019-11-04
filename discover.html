@@ -1,70 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Discover</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- STYLESHEETS: SEMANTIC UI, GOOGLE FONTS, CUSTOM -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="type/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/discover.css" />
+  </head>
 
-    <link rel="stylesheet" type="text/css" href="./assets/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="type/css" href="./assets/css/icon.css">
-    <link rel="stylesheet" type="type/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff2">
-    <link rel="stylesheet" type="type/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Personal Styling Link -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
-
-    <div class="ui clearing segment">
-        <h3 class="ui left floated header">
-            Discover what's right for you
-        </h3>
+  <body class="site">
+    <!-- NAVIGATION -->
+    <div class="ui secondary pointing menu">
+      <a class="item">
+        Home
+      </a>
+      <a class="item">
+        Add Entry
+      </a>
+      <a class="item">
+        Overview
+      </a>
+      <a class="active item">
+        Discover
+      </a>
+      <div class="right menu">
+        <a class="ui item">
+          Logout
+        </a>
+      </div>
     </div>
 
+    <main class="site-content">
+      <!-- LISTEN: MUSIC -->
+      <h3 class="discover-section"><i class="headphones icon"></i> Listen</h3>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
 
-    <div class="card-deck">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <!-- WATCH: VIDEOS -->
+      <h3 class="discover-section"><i class="film icon"></i> Watch</h3>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</body>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
 
+      <!-- READ: ARTICLES -->
+      <h3 class="discover-section"><i class="book icon"></i> Read</h3>
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="ui card">
+              <div class="content">
+                <div class="center aligned header">Jenny Hess</div>
+                <div class="center aligned description">
+                  <p>
+                    Jenny is a student studying Media Management at the New
+                    School
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+
+    <!-- GRAPH -->
+    <footer id="graph"></footer>
+
+    <!-- JAVASCRIPT, JQUERY -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/discover.js"></script>
+  </body>
 </html>
