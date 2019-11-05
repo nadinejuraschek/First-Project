@@ -1,3 +1,6 @@
+/*****************************
+SLIDESHOW
+*****************************/
 var appendNumber = 4;
 var prependNumber = 1;
 var swiper = new Swiper('.swiper-container', {
