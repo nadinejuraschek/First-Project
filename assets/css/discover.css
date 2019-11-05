@@ -34,7 +34,7 @@ NAVIGATION
 MAIN SECTION
 *****************************/
 .ui.card {
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   border: none;
   border-radius: 20px;
@@ -43,16 +43,13 @@ MAIN SECTION
   width: 100%;
 }
 .ui.card.listen {
-  background-image: linear-gradient(to right bottom, #ff966570, #d9532d70),
-    url("../pattern/gplaypattern_@2X.png");
+  background-image: url("../pattern/pattern1-yellow.jpg");
 }
 .ui.card.watch {
-  background-image: linear-gradient(to right bottom, #ffdb6570, #ffce2e70),
-    url("../pattern/gplaypattern_@2X.png");
+  background-image: url("../pattern/pattern1-green.jpg");
 }
 .ui.card.read {
-  background-image: linear-gradient(to right bottom, #8dff7e70, #59aa4f70),
-    url("../pattern/gplaypattern_@2X.png");
+  background-image: url("../pattern/pattern1-blue.jpg");
 }
 .discover-section {
   font-size: 1.5rem;
