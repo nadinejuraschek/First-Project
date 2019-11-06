@@ -1,0 +1,114 @@
+/*****************************
+COLORS
+#D9532D#ff9665#F9B38D
+#161E18#454E45#A9ABAA
+#61afbd#8FDAE7#F5EFEA
+
+exhilirated happy moderate sad depressed
+#C1EAF1#A3E0EB#8FDAE7#76B3BE#5C8B93 13vw
+*****************************/
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #161e18;
+}
+
+.site-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+/*****************************
+NAVIGATION
+*****************************/
+.ui.secondary.pointing.menu .item {
+  color: #161e18;
+}
+.ui.secondary.pointing.menu .active.item {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #61afbd;
+  font-weight: 700;
+  color: #61afbd;
+}
+
+/*****************************
+MAIN SECTION
+*****************************/
+hr {
+  margin: 2rem 0;
+}
+#display-date {
+  font-size: 1.5rem;
+}
+#mood-states {
+  margin: auto;
+}
+.summary {
+  border: 2px solid #22242615;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  margin: auto;
+  width: 70vw;
+}
+.mood {
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 50px;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+#exhilirated {
+  background-color: #c1eaf1;
+}
+
+#happy {
+  background-color: #a3e0eb;
+}
+
+#moderate {
+  background-color: #8fdae7;
+}
+
+#sad {
+  background-color: #76b3be;
+}
+
+#depressed {
+  background-color: #5c8b93;
+}
+
+.question {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+.answer-opt {
+  background-color: #f9b38d;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  display: block;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+.answer-opt:hover {
+  background-color: #d9532d;
+}
+
+/*****************************
+GRAPH
+*****************************/
+#graph {
+  border-top: 2px solid #22242615;
+  height: 10vw;
+}
