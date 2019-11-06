@@ -49,23 +49,28 @@ hr {
 #mood-states {
   margin: auto;
 }
+.column {
+  text-align: center;
+}
 .summary {
-  border: 2px solid #22242615;
-  border-radius: 1.5rem;
   padding: 3rem;
   margin: auto;
-  width: 70vw;
+  width: 90vw;
 }
 .mood {
   border: none;
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px #a9abaa;
   height: 50px;
-  padding: 0;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%;
+  width: 50px;
+}
+.button-clicked {
+  height: 65px;
+  width: 65px;
+}
+.mood-text {
+  font-size: 1.25rem;
+  margin-top: 1rem;
 }
 #exhilirated {
   background-color: #c1eaf1;
@@ -118,4 +123,8 @@ GRAPH
 #graph {
   border-top: 2px solid #22242615;
   height: 10vw;
+}
+
+.hide {
+  display: none;
 }

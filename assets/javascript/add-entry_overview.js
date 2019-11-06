@@ -22,6 +22,7 @@ $(document).ready(function () {
       answer3: "No, I don't feel like leaving the house."
     }
   ]
+  var mood = "";
   var ansQ1 = "";
   var ansQ2 = "";
   var ansQ3 = "";
@@ -65,11 +66,19 @@ $(document).ready(function () {
   /****************************
   EVENTS
   ****************************/
+  $(document).on("click", ".mood", function (event) {
+    var mood = $(this).attr("data-mood");
+    // TEST
+    console.log("selected mood: " + mood);
+    $(this).addClass("button-clicked");
+    // store in database
+    return mood
+  });
   $("#continue-btn").on("click", function (event) {
     // keep from sending off somewhere
     event.preventDefault();
 
-
+    // store user selection and input
 
 
   });
@@ -77,6 +86,8 @@ $(document).ready(function () {
   /****************************
   MAIN CODE
   ****************************/
+  $(".ui.modal").modal("show");
+
   // TEST
   // console.log(questions);
 

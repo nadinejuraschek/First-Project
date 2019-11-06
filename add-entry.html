@@ -43,16 +43,32 @@
       </div>
     </div>
 
-    <main class="site-content">
-      <div class="summary">
-        <!-- DATE -->
-        <h3 id="display-date" class="heading"></h3>
-        <div id="mood-states">
-        <button id="exhilirated" class="mood">exhilirated</button>
-        <button id="happy" class="mood">happy</button>
-        <button id="moderate" class="mood">moderate</button>
-        <button id="sad" class="mood">sad</button>
-        <button id="depressed" class="mood">depressed</button>
+    <main class="ui modal site-content summary">
+      <!-- DATE -->
+      <h3 id="display-date" class="heading"></h3>
+      <div id="mood-states" class="ui grid">
+        <div class="five column row">
+          <div class="column">
+            <button id="exhilirated" class="mood" data-mood="exhilirated"></button>
+            <p class="mood-text">exhilirated</p>
+          </div>
+          <div class="column">
+            <button id="happy" class="mood" data-mood="happy"></button>
+            <p class="mood-text">happy</p>
+          </div>
+          <div class="column">
+            <button id="moderate" class="mood" data-mood="moderate"></button>
+            <p class="mood-text">moderate</p>
+          </div>
+          <div class="column">
+            <button id="sad" class="mood" data-mood="sad"></button>
+            <p class="mood-text">sad</p>
+          </div>
+          <div class="column">
+            <button id="depressed" class="mood" data-mood="depressed"></button>
+            <p class="mood-text">depressed</p>
+          </div>
+        </div>
       </div>
 
       <hr>
@@ -82,7 +98,6 @@
             <button type="submit" id="continue-btn">Continue</button>
           </div>
         </div>
-      </div>
     </main>
 
     <!-- GRAPH -->
