@@ -92,7 +92,9 @@ hr {
   font-size: 1.5rem;
   margin: 1.5rem 0;
 }
-.answer-opt {
+.answer-opt-1,
+.answer-opt-2,
+.answer-opt-3 {
   border: 3px solid #f9b38d;
   border-radius: 10px;
   color: #000;
@@ -102,7 +104,12 @@ hr {
   padding: 0.5rem;
   width: 50%;
 }
-.answer-opt:hover {
+.answer-opt-1:hover,
+.answer-opt-2:hover,
+.answer-opt-3:hover {
+  background-color: #f9b38d;
+}
+.answer-selected {
   background-color: #f9b38d;
 }
 
@@ -116,6 +123,9 @@ hr {
   margin-top: 2rem;
   padding: 1rem;
   text-transform: uppercase;
+}
+#continue-btn:hover {
+  background-color: #8fdae7;
 }
 /*****************************
 GRAPH
