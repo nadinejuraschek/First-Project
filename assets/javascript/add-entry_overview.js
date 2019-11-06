@@ -76,11 +76,6 @@ $(document).ready(function () {
     $("#answer-3C").attr("data-text", questions[2].answerText3);
   }
 
-  function displayCommentArea() {
-    comment = $("#userComment").val().trim();
-    console.log(comment);
-  }
-
   /****************************
   EVENTS
   ****************************/
@@ -96,19 +91,19 @@ $(document).ready(function () {
     var ansQ1 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
-    console.log(ansQ1);
+    console.log("selected answer #1: " + ansQ1);
   });
   $(document).on("click", ".answer-opt-2", function (event) {
     var ansQ2 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
-    console.log(ansQ2);
+    console.log("selected answer #2: " + ansQ2);
   });
   $(document).on("click", ".answer-opt-3", function (event) {
     var ansQ3 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
-    console.log(ansQ3);
+    console.log("selected answer #3: " + ansQ3);
   });
   $("#continue-btn").on("click", function (event) {
     // keep from sending off somewhere
@@ -116,6 +111,10 @@ $(document).ready(function () {
 
     // store user selection and input
 
+    // comments can be added
+    comment = $("#userComment").val().trim();
+    // TEST
+    console.log("user comments: " + comment);
 
   });
 
