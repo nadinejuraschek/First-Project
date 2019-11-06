@@ -43,7 +43,7 @@ MAIN SECTION
 hr {
   margin: 2rem 0;
 }
-#display-date {
+.heading {
   font-size: 1.5rem;
 }
 #mood-states {
@@ -70,19 +70,15 @@ hr {
 #exhilirated {
   background-color: #c1eaf1;
 }
-
 #happy {
   background-color: #a3e0eb;
 }
-
 #moderate {
   background-color: #8fdae7;
 }
-
 #sad {
   background-color: #76b3be;
 }
-
 #depressed {
   background-color: #5c8b93;
 }
@@ -92,19 +88,30 @@ hr {
   margin: 1.5rem 0;
 }
 .answer-opt {
-  background-color: #f9b38d;
-  border: none;
+  border: 3px solid #f9b38d;
   border-radius: 10px;
   color: #000;
   display: block;
   font-size: 1.25rem;
   margin: 1rem 0;
   padding: 0.5rem;
+  width: 50%;
 }
 .answer-opt:hover {
-  background-color: #d9532d;
+  background-color: #f9b38d;
 }
 
+#continue-btn {
+  background-color: #61afbd;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
 /*****************************
 GRAPH
 *****************************/
