@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $(".ui.modal").modal("show");
     // fix menu when passed
     $('.masthead').visibility({
         once: false,
