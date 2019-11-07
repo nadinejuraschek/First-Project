@@ -17,8 +17,6 @@ $(document).ready(function () {
   // set up authentication and database
   const auth = firebase.auth();
   const database = firebase.database();
-  // update database settings
-  database.settings({ timestampsInSnapshots: true });
   // Firebase watcher + initial loader
   database.ref().on("child_added", function (childSnapshot) {
     // TEST
@@ -67,6 +65,11 @@ $(document).ready(function () {
   // get current date
   var currentDate = moment().format("MMMM Do, YYYY");
   console.log("Today is: " + currentDate);
+  var mood = "";
+  var ansQ1 = "";
+  var ansQ2 = "";
+  var ansQ3 = "";
+  var comment = "";
 
   /****************************
   FUNCTIONS
@@ -106,43 +109,62 @@ $(document).ready(function () {
   }
 
   /****************************
-  EVENTS
+  ADD ENTRY
   ****************************/
+  // display modal
+  $(".ui.modal").modal("show");
+  // display current date
+  displayDate();
+  // display questions
+  displayQuestions();
+
+  // select a mood
   $(document).on("click", ".mood", function (event) {
-    var mood = $(this).attr("data-mood");
+    mood = $(this).attr("data-mood");
     $(this).addClass("button-clicked");
     // TEST
     console.log("selected mood: " + mood);
     // store in database
     return mood
   });
+  // select answer #1
   $(document).on("click", ".answer-opt-1", function (event) {
-    var ansQ1 = $(this).attr("data-text");
+    ansQ1 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #1: " + ansQ1);
     return ansQ1
   });
+  // select answer #2
   $(document).on("click", ".answer-opt-2", function (event) {
-    var ansQ2 = $(this).attr("data-text");
+    ansQ2 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #2: " + ansQ2);
     return ansQ2
   });
+  // select answer #3
   $(document).on("click", ".answer-opt-3", function (event) {
-    var ansQ3 = $(this).attr("data-text");
+    ansQ3 = $(this).attr("data-text");
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #3: " + ansQ3);
     return ansQ3
   });
+
+  // send form off and redirect user
   $("#continue-btn").on("click", function (event) {
     // keep from sending off somewhere
     event.preventDefault();
+
     // comments can be added
     comment = $("#userComment").val().trim();
+
     // TEST
+    console.log("mood stored in database: " + mood);
+    console.log("answer #1 stored in database: " + ansQ1);
+    console.log("answer #1 stored in database: " + ansQ2);
+    console.log("answer #1 stored in database: " + ansQ3);
     console.log("user comments: " + comment);
 
     // store user selection and input
@@ -157,21 +179,17 @@ $(document).ready(function () {
       timeAdded: firebase.database.ServerValue.TIMESTAMP
     });
 
+    // redirect user
+    window.location.replace("overview.html");
   });
 
   /****************************
-  MAIN CODE
+  OVERVIEW
   ****************************/
-  $(".ui.modal").modal("show");
-
-  // TEST
-  // console.log(questions);
-
-  displayDate();
-
-  // display questions
-  displayQuestions();
-
-  // 
+  // access database ???
+  $("#answer-1").text(ansQ1);
+  $("#answer-2").text(ansQ2);
+  $("#answer-3").text(ansQ3);
+  $("#display-comments-overview").text(comment);
 
 });
