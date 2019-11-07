@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     /******************************
     FIREBASE
     ******************************/
@@ -19,12 +18,13 @@ $(document).ready(function () {
     /******************************
     VARIABLES
     ******************************/
-
+    const database = firebase.database();
+    const auth = firebase.auth();
 
     /******************************
     AUTHENTICATION
     ******************************/
-    $("#submit-btn").on("submit", function (event) {
+    $("#login-btn").on("submit", e => {
         // keep button from sending form somewhere
         event.preventDefault();
 
@@ -33,13 +33,17 @@ $(document).ready(function () {
         var password = $("#password-input").val().trim();
 
         // Firebase Sign In Function
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // display error message
-            // $("#error-message").text("This user does not exist. Please sign up.");
-        });
+        var promise = auth.signInWithEmailAndPassword(email, password)
+        promise.then(function (e) {
+            window.location.replace("homepage.html");
+        })
+            .catch(function (e) {
+                // Handle Errors here.
+                var errorCode = e.code;
+                var errorMessage = e.message;
+                // display error message
+                alert("This user does not exist. Please sign up.");
+            });
     });
 
     $("#signup-btn").on("click", e => {
@@ -52,7 +56,7 @@ $(document).ready(function () {
         console.log(email);
         var password = $("#password-input").val().trim();
         console.log(password);
-        var promise = firebase.auth().createUserWithEmailAndPassword(email, password);
+        var promise = auth.createUserWithEmailAndPassword(email, password);
         promise.then(function (e) {
             window.location.replace("homepage.html");
         })
@@ -64,7 +68,7 @@ $(document).ready(function () {
             });
     });
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    auth.onAuthStateChanged(function (user) {
         if (user) {
             // User is signed in.
             var displayName = user.displayName;
@@ -83,7 +87,7 @@ $(document).ready(function () {
     });
 
     $("#logout-btn").on("click", e => {
-        firebase.auth().signOut().then(function (e) {
+        auth.signOut().then(function (e) {
             // Sign-out successful.
             window.location.replace("log-in.html");
         }).catch(function (e) {
@@ -95,22 +99,9 @@ $(document).ready(function () {
     /******************************
     FORM VALIDATION
     ******************************/
-    // Email
-    var emailInput = $("#email-input");
-
-    // validates input
-    // function validateEmail() {
-    //     var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-    //   var validEmail = regEx.test(email);
-    //   console.log(validEmail);
-    //   if (!validEmail) {
-    //     $("#email-error-message").css("display", "block");;
-    //   }
-    // }
 
     // Password
     var passwordInput = $("#password-input");
-    var letter = $("#letter");
     var capital = $("#capital");
     var number = $("#number");
     var length = $("#length");
@@ -124,15 +115,6 @@ $(document).ready(function () {
     });
     // validates input
     passwordInput.keyup(function () {
-        // validates lowercase letters
-        var lowerCaseLetters = /[a-z]/g;
-        if (passwordInput.val().match(lowerCaseLetters)) {
-            letter.removeClass("invalid");
-            letter.addClass("valid");
-        } else {
-            letter.removeClass("valid");
-            letter.addClass("invalid");
-        }
         // validates capital letters
         var upperCaseLetters = /[A-Z]/g;
         if (passwordInput.val().match(upperCaseLetters)) {
