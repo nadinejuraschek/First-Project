@@ -75,17 +75,17 @@
       <!-- QUESTION ANSWERS -->
       <div id="question-answers">
         <p id="questionA" class="question"></p>
-          <button id="answer-1A" class="answer-opt-1"></button>
-          <button id="answer-2A" class="answer-opt-1"></button>
-          <button id="answer-3A" class="answer-opt-1"></button>
+          <button id="answer-1A" class="answer-opt-1" data-text="I feel hopeless all the time."></button>
+          <button id="answer-2A" class="answer-opt-1" data-text="I feel hopeless sometimes."></button>
+          <button id="answer-3A" class="answer-opt-1" data-text="I feel hopeful."></button>
         <p id="questionB" class="question"></p>
-          <button id="answer-1B" class="answer-opt-2"></button>
-          <button id="answer-2B" class="answer-opt-2"></button>
-          <button id="answer-3B" class="answer-opt-2"></button>
+          <button id="answer-1B" class="answer-opt-2" data-text="I have trouble falling asleep."></button>
+          <button id="answer-2B" class="answer-opt-2" data-text="I keep waking up at night."></button>
+          <button id="answer-3B" class="answer-opt-2" data-text="My sleeping habits are normal."></button>
         <p id="questionC" class="question"></p>
-          <button id="answer-1C" class="answer-opt-3"></button>
-          <button id="answer-2C" class="answer-opt-3"></button>
-          <button id="answer-3C" class="answer-opt-3"></button>
+          <button id="answer-1C" class="answer-opt-3" data-text="I am productive."></button>
+          <button id="answer-2C" class="answer-opt-3" data-text="I only complete necessary tasks."></button>
+          <button id="answer-3C" class="answer-opt-3" data-text="I have trouble leaving the house."></button>
       </div>
 
       <hr>
@@ -105,7 +105,9 @@
 
     <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
 
     <!-- JAVASCRIPT, JQUERY -->
     <script
