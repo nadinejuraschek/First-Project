@@ -24,7 +24,7 @@ $(document).ready(function () {
     /******************************
     AUTHENTICATION
     ******************************/
-    $("#submit-btn").on("click", function (event) {
+    $("#submit-btn").on("submit", function (event) {
         // keep button from sending form somewhere
         event.preventDefault();
 
@@ -42,18 +42,26 @@ $(document).ready(function () {
         });
     });
 
-    $("#signup-btn").on("click", function (event) {
+    $("#signup-btn").on("click", e => {
+        // console.log("clicked");
         // keep button from sending form somewhere
         event.preventDefault();
 
         // store inputs
         var email = $("#email-input").val().trim();
+        console.log(email);
         var password = $("#password-input").val().trim();
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-        });
+        console.log(password);
+        var promise = firebase.auth().createUserWithEmailAndPassword(email, password);
+        promise.then(function (e) {
+            window.location.replace("homepage.html");
+        })
+            .catch(function (e) {
+                // Handle Errors here.
+                var errorCode = e.code;
+                var errorMessage = e.message;
+                alert(errorCode + ": " + errorMessage);
+            });
     });
 
     firebase.auth().onAuthStateChanged(function (user) {
@@ -74,11 +82,14 @@ $(document).ready(function () {
         }
     });
 
-    $("#logout-btn").on("click", function (event) {
-        firebase.auth().signOut().then(function () {
+    $("#logout-btn").on("click", e => {
+        firebase.auth().signOut().then(function (e) {
             // Sign-out successful.
-        }).catch(function (error) {
+            window.location.replace("log-in.html");
+        }).catch(function (e) {
             // An error happened.
+            var errorMessage = e.message;
+            alert(errorCode + ": " + errorMessage);
         });
     });
     /******************************
@@ -96,7 +107,7 @@ $(document).ready(function () {
     //     $("#email-error-message").css("display", "block");;
     //   }
     // }
-    
+
     // Password
     var passwordInput = $("#password-input");
     var letter = $("#letter");
@@ -104,18 +115,18 @@ $(document).ready(function () {
     var number = $("#number");
     var length = $("#length");
     // password message box displays when input field is clicked
-    passwordInput.focus(function() {
-    $("#password-error-message").css("display", "block");
+    passwordInput.focus(function () {
+        $("#password-error-message").css("display", "block");
     });
     // password message box is hidden when user clicks outside input field
-    passwordInput.blur(function() {
-    $("#password-error-message").css("display", "none");
+    passwordInput.blur(function () {
+        $("#password-error-message").css("display", "none");
     });
     // validates input
-    passwordInput.keyup(function() {
+    passwordInput.keyup(function () {
         // validates lowercase letters
         var lowerCaseLetters = /[a-z]/g;
-        if(passwordInput.val().match(lowerCaseLetters)) {
+        if (passwordInput.val().match(lowerCaseLetters)) {
             letter.removeClass("invalid");
             letter.addClass("valid");
         } else {
@@ -124,7 +135,7 @@ $(document).ready(function () {
         }
         // validates capital letters
         var upperCaseLetters = /[A-Z]/g;
-        if(passwordInput.val().match(upperCaseLetters)) {
+        if (passwordInput.val().match(upperCaseLetters)) {
             capital.removeClass("invalid");
             capital.addClass("valid");
         } else {
@@ -133,7 +144,7 @@ $(document).ready(function () {
         }
         // validates numbers
         var numbers = /[0-9]/g;
-        if(passwordInput.val().match(numbers)) {
+        if (passwordInput.val().match(numbers)) {
             number.removeClass("invalid");
             number.addClass("valid");
         } else {
@@ -141,7 +152,7 @@ $(document).ready(function () {
             number.addClass("invalid");
         }
         // validates length
-        if(passwordInput.val().length >= 8) {
+        if (passwordInput.val().length >= 8) {
             length.removeClass("invalid");
             length.addClass("valid");
         } else {
