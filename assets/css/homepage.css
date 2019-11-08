@@ -1,0 +1,129 @@
+/*******************************
+COLORS
+#D9532D#ff9665#F9B38D
+#161E18#454E45#A9ABAA
+#61afbd#8FDAE7#F5EFEA
+*******************************/
+
+/*******************************
+NAVIGATION
+*******************************/
+
+/*******************************
+WELCOME
+*******************************/
+/* LOGO */
+
+/* WEATHER */
+
+/* QUOTE */
+#quote {
+}
+
+/*******************************
+DISCOVER PREVIEW
+*******************************/
+.music {
+  background: url(https://cdn.pixabay.com/photo/2019/04/13/20/51/music-background-4125573_960_720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.quote {
+  background: url(https://images.unsplash.com/photo-1564352969556-5825e542fa6b?ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*******************************
+GRAPH
+*******************************/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.option:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 4px;
+}
+.pusher .top {
+  background: url(https://is5-ssl.mzstatic.com/image/thumb/Purple111/v4/11/4c/0e/114c0e6a-eb12-8158-a1c7-64632cfd6a3f/source/512x512bb.jpg);
+}
+.masthead.segment {
+  min-height: 700px;
+  padding: 1rem 0;
+}
+.masthead .logo.item img {
+  margin-right: 1rem;
+}
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5rem;
+}
+.masthead h1.ui.header {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 4rem;
+}
+.masthead h2 {
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+.ui.vertical.stripe {
+  padding: 8rem;
+}
+.ui.vertical.stripe h3 {
+  font-size: 2rem;
+}
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3rem;
+}
+.ui.vertical.stripe .floated.image {
+  clear: both;
+}
+.ui.vertical.stripe p {
+  font-size: 1.33rem;
+}
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3rem 0;
+}
+.quote.stripe.segment {
+  padding: 0;
+}
+.quote.stripe.segment .grid .column {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.footer.segment {
+  padding: 5rem 0em;
+}
+
+/*******************************
+RESPONSIVNESS
+*******************************/
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important;
+  }
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none;
+  }
+  .secondary.pointing.menu .toc.item {
+    display: block;
+  }
+  .masthead.segment {
+    min-height: 350px;
+  }
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em;
+  }
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+}

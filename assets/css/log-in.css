@@ -1,0 +1,69 @@
+/******************************
+COLORS
+#F9FEFF
+#51C3CC
+#C9F3F6
+#9CEAEF
+#373F51
+#D1FCA4
+******************************/
+
+body {
+  background-color: #f9feff;
+  color: #373f51;
+}
+body > .grid {
+  height: 100%;
+}
+.ui.header {
+  color: #373f51;
+}
+.ui.button {
+  background-color: #c9f3f6;
+}
+.ui.button:hover {
+  background-color: #9ceaef;
+}
+.ui.segment {
+  background-color: #373f51;
+}
+.ui.message {
+  background-color: #373f51;
+  color: #f9feff;
+}
+.ui.input {
+  color: #373f51;
+}
+.image {
+  margin-top: -100px;
+}
+.column {
+  max-width: 450px;
+}
+#signup-btn {
+  margin-left: 8px;
+}
+
+/******************************
+FORM VALIDATION
+******************************/
+#password-error-message p {
+  text-align: left;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: #389e6b;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}
