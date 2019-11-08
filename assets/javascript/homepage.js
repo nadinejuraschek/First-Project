@@ -51,4 +51,18 @@ $(document).ready(function () {
     ****************************************/
     getNewQuote();
 
+    /****************************************
+    AUTHENTICATION
+    ****************************************/
+    $("#logout-btn").on("click", e => {
+        auth.signOut().then(function (e) {
+            // Sign-out successful.
+            window.location.replace("log-in.html");
+        }).catch(function (e) {
+            // An error happened.
+            var errorMessage = e.message;
+            alert(errorCode + ": " + errorMessage);
+        });
+    });
+
 });
