@@ -1,0 +1,93 @@
+/*****************************
+COLORS
+#D9532D#ff9665#F9B38D
+#161E18#454E45#A9ABAA
+#61afbd#8FDAE7#F5EFEA
+*****************************/
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  height: 80vw;
+  overflow-y: scroll;
+  padding: 0 5rem;
+}
+/*****************************
+NAVIGATION
+*****************************/
+.ui.secondary.pointing.menu .item {
+  color: #161e18;
+}
+.ui.secondary.pointing.menu .active.item {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #61afbd;
+  font-weight: 700;
+  color: #61afbd;
+}
+
+/*****************************
+MAIN SECTION
+*****************************/
+.ui.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 1px 2px #454e45;
+  height: 150px;
+  width: 100%;
+}
+.ui.card.listen {
+  background-image: url("../pattern/pattern1-yellow.jpg");
+}
+.ui.card.watch {
+  background-image: url("../pattern/pattern1-green.jpg");
+}
+.ui.card.read {
+  background-image: url("../pattern/pattern1-blue.jpg");
+}
+.discover-section {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+}
+.card-heading {
+  text-transform: uppercase;
+}
+.card-body {
+  margin-top: 15px;
+}
+#buttons {
+  /* Positioning */
+  margin: 50px 0;
+  /* Typography */
+  text-align: center;
+}
+
+button {
+  /* Box-model */
+  width: 200px;
+  height: 100px;
+}
+
+.swiper-button-prev {
+  color: #000;
+}
+
+.swiper-button-next {
+  color: #000;
+}
+
+/*****************************
+GRAPH
+*****************************/
+#graph {
+  border-top: 2px solid #22242615;
+  height: 20vw;
+}
