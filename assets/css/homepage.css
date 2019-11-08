@@ -17,6 +17,8 @@ WELCOME
 /* WEATHER */
 
 /* QUOTE */
+#quote {
+}
 
 /*******************************
 DISCOVER PREVIEW
@@ -31,7 +33,6 @@ DISCOVER PREVIEW
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 /*******************************
 GRAPH
 *******************************/
@@ -39,7 +40,6 @@ GRAPH
 a {
   text-decoration: none;
   color: inherit;
-  font-size: 24px;
 }
 .option:hover {
   color: black;
@@ -52,60 +52,53 @@ a {
 .pusher .top {
   background: url(https://is5-ssl.mzstatic.com/image/thumb/Purple111/v4/11/4c/0e/114c0e6a-eb12-8158-a1c7-64632cfd6a3f/source/512x512bb.jpg);
 }
-.hidden.menu {
-  display: none;
-}
 .masthead.segment {
   min-height: 700px;
-  padding: 1em 0em;
+  padding: 1rem 0;
 }
 .masthead .logo.item img {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 .masthead .ui.menu .ui.button {
-  margin-left: 0.5em;
+  margin-left: 0.5rem;
 }
 .masthead h1.ui.header {
-  margin-top: 3em;
-  margin-bottom: 0em;
-  font-size: 4em;
-  font-weight: normal;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 4rem;
 }
 .masthead h2 {
-  font-size: 1.7em;
+  font-size: 1.7rem;
   font-weight: normal;
 }
 .ui.vertical.stripe {
-  padding: 8em 0em;
+  padding: 8rem;
 }
 .ui.vertical.stripe h3 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
-  margin-top: 3em;
+  margin-top: 3rem;
 }
 .ui.vertical.stripe .floated.image {
   clear: both;
 }
 .ui.vertical.stripe p {
-  font-size: 1.33em;
+  font-size: 1.33rem;
 }
 .ui.vertical.stripe .horizontal.divider {
-  margin: 3em 0em;
+  margin: 3rem 0;
 }
 .quote.stripe.segment {
-  padding: 0em;
+  padding: 0;
 }
 .quote.stripe.segment .grid .column {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .footer.segment {
-  padding: 5em 0em;
-}
-.secondary.pointing.menu .toc.item {
-  display: none;
+  padding: 5rem 0em;
 }
 
 /*******************************
