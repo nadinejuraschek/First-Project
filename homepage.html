@@ -22,6 +22,12 @@
       type="type/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff"
     />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" type="text/css" href="assets/css/homepage.css" />
@@ -30,16 +36,16 @@
   <body>
     <!-- NAVIGATION -->
     <div class="ui sticky secondary pointing menu">
-      <a class="active item">
+      <a class="active item" href="homepage.html">
         Home
       </a>
-      <a class="item">
+      <a id="add-entry-btn" class="item">
         Add Entry
       </a>
-      <a class="item">
+      <a class="item" href="overview.html">
         Overview
       </a>
-      <a class="item">
+      <a class="item" href="discover.html">
         Discover
       </a>
       <div class="right menu">
@@ -169,13 +175,21 @@
       </div>
     </div>
 
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+
     <!-- JAVASCRIPT, JQUERY -->
     <script
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/homepage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
   </body>
 </html>
