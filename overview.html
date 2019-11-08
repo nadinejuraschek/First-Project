@@ -25,7 +25,7 @@
       <a class="item">
         Home
       </a>
-      <a class="item">
+      <a id="add-entry-btn" class="item">
         Add Entry
       </a>
       <a class="active item">
@@ -41,19 +41,159 @@
       </div>
     </div>
 
-    <main class="site-content">
+    <!-- ADD ENTRY -->
+    <main class="ui modal site-content summary">
       <!-- DATE -->
-      <div class="summary">
-        <h3 id="display-date"></h3>
-        <!-- QUESTION ANSWERS -->
-        <div id="question-answers">
-          <div id="answer-1"></div>
-          <div id="answer-2"></div>
-          <div id="answer-3"></div>
+      <h3 id="display-date" class="heading"></h3>
+      <div id="mood-states" class="ui grid">
+        <div class="five column row">
+          <div class="column">
+            <button
+              id="depressed"
+              class="mood"
+              data-mood="depressed"
+              data-color="#5C8B93"
+              value="1"
+            ></button>
+            <p class="mood-text">depressed</p>
+          </div>
+          <div class="column">
+            <button
+              id="sad"
+              class="mood"
+              data-mood="sad"
+              data-color="#76B3BE"
+              value="2"
+            ></button>
+            <p class="mood-text">sad</p>
+          </div>
+          <div class="column">
+            <button
+              id="moderate"
+              class="mood"
+              data-mood="moderate"
+              data-color="#8FDAE7"
+              value="3"
+            ></button>
+            <p class="mood-text">moderate</p>
+          </div>
+          <div class="column">
+            <button
+              id="happy"
+              class="mood"
+              data-mood="happy"
+              data-color="#A3E0EB"
+              value="4"
+            ></button>
+            <p class="mood-text">happy</p>
+          </div>
+          <div class="column">
+            <button
+              id="exhilirated"
+              class="mood"
+              data-mood="exhilirated"
+              data-color="#C1EAF1"
+              value="5"
+            ></button>
+            <p class="mood-text">exhilirated</p>
+          </div>
         </div>
+      </div>
 
-        <!-- COMMENTS -->
-        <div id="display-comments-overview"></div>
+      <hr />
+      <!-- QUESTION ANSWERS -->
+      <div id="question-answers">
+        <p id="questionA" class="question"></p>
+        <button
+          id="answer-1A"
+          class="answer-opt-1"
+          data-text="I feel hopeless all the time."
+        ></button>
+        <button
+          id="answer-2A"
+          class="answer-opt-1"
+          data-text="I feel hopeless sometimes."
+        ></button>
+        <button
+          id="answer-3A"
+          class="answer-opt-1"
+          data-text="I feel hopeful."
+        ></button>
+        <p id="questionB" class="question"></p>
+        <button
+          id="answer-1B"
+          class="answer-opt-2"
+          data-text="I have trouble falling asleep."
+        ></button>
+        <button
+          id="answer-2B"
+          class="answer-opt-2"
+          data-text="I keep waking up at night."
+        ></button>
+        <button
+          id="answer-3B"
+          class="answer-opt-2"
+          data-text="My sleeping habits are normal."
+        ></button>
+        <p id="questionC" class="question"></p>
+        <button
+          id="answer-1C"
+          class="answer-opt-3"
+          data-text="I am productive."
+        ></button>
+        <button
+          id="answer-2C"
+          class="answer-opt-3"
+          data-text="I only complete necessary tasks."
+        ></button>
+        <button
+          id="answer-3C"
+          class="answer-opt-3"
+          data-text="I have trouble leaving the house."
+        ></button>
+      </div>
+
+      <hr />
+      <!-- COMMENTS -->
+      <div id="display-comments">
+        <div class="ui form">
+          <div class="field">
+            <h3 class="heading">Additional Comments:</h3>
+            <textarea id="userComment"></textarea>
+            <button type="submit" id="continue-btn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <main class="site-content">
+      <div class="table-div">
+        <table id="tracker-table" class="ui very basic selectable celled table">
+          <thead id="category">
+            <tr>
+              <td>Date</td>
+              <td>Mood</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- Daily Summary -->
+      <div id="summary-modal" class="modal">
+        <div class="modal-content summary">
+          <!-- DATE -->
+          <h3 id="display-date"></h3>
+          <!-- QUESTION ANSWERS -->
+          <div id="question-answers">
+            <div id="answer-1"></div>
+            <div id="answer-2"></div>
+            <div id="answer-3"></div>
+          </div>
+          <!-- COMMENTS -->
+          <div id="display-comments-overview"></div>
+          <button id="close-btn">Close</button>
+        </div>
       </div>
     </main>
 

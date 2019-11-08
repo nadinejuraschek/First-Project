@@ -26,13 +26,12 @@ $(document).ready(function () {
     // console.log(childSnapshot.val().ansQ3);
 
     // add new table row
-    // var tr = $("<tr class=''>");
-    // tr.append($("<td>" + childSnapshot.val().trainName + "</td>"));
-    // tr.append($("<td>" + childSnapshot.val().destination + "</td>"));
-    // tr.append($("<td>" + childSnapshot.val().frequency + "</td>"));
-    // tr.append($("<td>" + nextArrival + "</td>"));
-    // tr.append($("<td>" + minutesAway + "</td>"));
-    // $("#train-table").append(tr);
+    var tr = $("<tr>");
+    tr.append($("<td><a id='modal-trigger' href='#'>" + childSnapshot.val().currentDate + "</a></td>"));
+    console.log(childSnapshot.val().currentDate);
+    tr.append($("<td style='background-color:" + childSnapshot.val().color + "'>" + childSnapshot.val().mood + "</td>"));
+    console.log(childSnapshot.val().mood);
+    $("#tracker-table").append(tr);
     // Handle the errors
   }, function (errorObject) {
     console.log("Errors handled: " + errorObject.code);
@@ -66,6 +65,7 @@ $(document).ready(function () {
   var currentDate = moment().format("MMMM Do, YYYY");
   console.log("Today is: " + currentDate);
   var mood = "";
+  var color = "";
   var ansQ1 = "";
   var ansQ2 = "";
   var ansQ3 = "";
@@ -78,9 +78,13 @@ $(document).ready(function () {
     $("#display-date").text(currentDate);
   }
 
-  // function displayDailySummary() {
-  //   $("#")
-  // }
+  function displayDailySummary() {
+    // access database ???
+    $("#answer-1").text(ansQ1);
+    $("#answer-2").text(ansQ2);
+    $("#answer-3").text(ansQ3);
+    $("#display-comments-overview").text(comment);
+  }
 
   function displayQuestions() {
     $("#questionA").text(questions[0].question);
@@ -109,10 +113,13 @@ $(document).ready(function () {
   }
 
   /****************************
-  ADD ENTRY
+  ADD ENTRY MODAL
   ****************************/
   // display modal
-  $(".ui.modal").modal("show");
+  $(document).on("click", "#add-entry-btn", function () {
+    $(".ui.modal").modal("show");
+    // $(".ui.modal").css("display", "block");
+  });
   // display current date
   displayDate();
   // display questions
@@ -121,11 +128,12 @@ $(document).ready(function () {
   // select a mood
   $(document).on("click", ".mood", function (event) {
     mood = $(this).attr("data-mood");
+    color = $(this).attr("data-color");
     $(this).addClass("button-clicked");
     // TEST
-    console.log("selected mood: " + mood);
+    console.log("selected mood: " + mood + ", " + color);
     // store in database
-    return mood
+    return mood, color
   });
   // select answer #1
   $(document).on("click", ".answer-opt-1", function (event) {
@@ -162,6 +170,7 @@ $(document).ready(function () {
 
     // TEST
     console.log("mood stored in database: " + mood);
+    console.log("color for mood: " + color);
     console.log("answer #1 stored in database: " + ansQ1);
     console.log("answer #1 stored in database: " + ansQ2);
     console.log("answer #1 stored in database: " + ansQ3);
@@ -172,6 +181,7 @@ $(document).ready(function () {
     database.ref().push({
       currentDate: currentDate,
       mood: mood,
+      color: color,
       ansQ1: ansQ1,
       ansQ2: ansQ2,
       ansQ3: ansQ3,
@@ -186,10 +196,16 @@ $(document).ready(function () {
   /****************************
   OVERVIEW
   ****************************/
-  // access database ???
-  $("#answer-1").text(ansQ1);
-  $("#answer-2").text(ansQ2);
-  $("#answer-3").text(ansQ3);
-  $("#display-comments-overview").text(comment);
-
+  /****************************
+  DAILY SUMMARY MODAL
+  ****************************/
+  // when date is clicked, open summary modal
+  $(document).on("click", "#modal-trigger", function () {
+    $("#summary-modal").css("display", "block");
+    displayDailySummary();
+  });
+  // when close button is clicked, hide modal
+  $("#close-btn").on("click", function () {
+    $("#summary-modal").css("display", "none");
+  });
 });
