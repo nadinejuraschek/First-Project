@@ -1,195 +1,121 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- STANDARD META -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
 
-    <!-- SITE PROPERTIES -->
-    <title>Moodsphere - Home</title>
+<head>
+  <!-- STANDARD META -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="type/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+  <!-- SITE PROPERTIES -->
+  <title>Moodsphere - Home</title>
 
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" type="text/css" href="assets/css/homepage.css" />
-  </head>
+  <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <link rel="stylesheet" type="type/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
-  <body>
-    <!-- NAVIGATION -->
-    <div class="ui sticky secondary pointing menu">
-      <a class="active item" href="homepage.html">
-        Home
+  <!-- CUSTOM STYLESHEET -->
+  <link rel="stylesheet" type="text/css" href="assets/css/homepage.css" />
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <div class="ui sticky secondary pointing menu">
+    <a class="active item" href="homepage.html">
+      Home
+    </a>
+    <a id="add-entry-btn" class="item">
+      Add Entry
+    </a>
+    <a class="item" href="overview.html">
+      Overview
+    </a>
+    <a class="item" href="discover.html">
+      Discover
+    </a>
+    <div class="right menu">
+      <a class="ui item" id="logout-btn">
+        Logout
       </a>
-      <a id="add-entry-btn" class="item">
-        Add Entry
-      </a>
-      <a class="item" href="overview.html">
-        Overview
-      </a>
-      <a class="item" href="discover.html">
-        Discover
-      </a>
-      <div class="right menu">
-        <a class="ui item" id="logout-btn">
-          Logout
-        </a>
-      </div>
     </div>
+  </div>
 
-      <div class="ui inverted vertical masthead center aligned segment">
-        <div class="ui container">
-          <div class="ui large secondary inverted pointing menu">
-            <div class="right item">
-              <h2 class="ui icon header">
-                <i class="settings icon" style="color: white"></i>
-                <div class="content" style="color: white">
-                  Current Weather
-                  <div
-                    class="sub header"
-                    class="current-location"
-                    style="color: white"
-                  ></div>
-                </div>
-              </h2>
+  <div class="ui inverted vertical masthead center aligned segment">
+    <div class="ui container">
+      <div class="ui large secondary inverted pointing menu">
+        <div class="right item">
+          <h2 class="ui icon header">
+            <i class="settings icon" style="color: white"></i>
+            <div class="content" style="color: white">
+              Current Weather
+              <div class="sub header" class="current-location" style="color: white"></div>
             </div>
-          </div>
-        </div>
-
-        <!-- MAIN CONTENT -->
-        <div class="ui text container">
-          <h1 class="ui inverted header">Moodsphere</h1>
-          <h2 id="quote"></h2>
-          <h4 id="author"></h4>
-        </div>
-      </div>
-
-      <div class="ui vertical stripe segment"></div>
-
-      <div class="ui vertical stripe quote segment">
-        <div class="ui equal width stackable internally celled grid">
-          <div class="center aligned row">
-            <div class="column music">
-              <h3>Browse Music</h3>
-              <i class="fas fa-arrow-right"></i
-              ><strong
-                ><a
-                  href="https://open.spotify.com/playlist/6NyANZ6bIdvrrEtNFeA3SD"
-                  style="text-decoration: none"
-                  style="color: black"
-                  class="option"
-                  >Here are some good vibes!</a
-                ></strong
-              >
-              <i class="fas fa-arrow-left"></i>
-            </div>
-            <div class="column quote">
-              <h3>Healing Words and Inspiring Quotes</h3>
-
-              <i class="fas fa-arrow-right"></i>
-              <strong
-                ><a href="https://quotes-generator.com/" class="option"
-                  >Find some words of wisdom.</a
-                ></strong
-              >
-              <i class="fas fa-arrow-left"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="ui vertical stripe segment">
-        <div class="ui text container">
-          <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-          <p>
-            Instead of focusing on content creation and hard work, we have
-            learned how to master the art of doing nothing by providing massive
-            amounts of whitespace and generic content that can seem massive,
-            monolithic and worth your attention.
-          </p>
-          <a class="ui large button">Read More</a>
-          <h4 class="ui horizontal header divider">
-            <a href="#">Case Studies</a>
-          </h4>
-          <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-          <p>
-            Yes I know you probably disregarded the earlier boasts as
-            non-sequitur filler content, but its really true. It took years of
-            gene splicing and combinatory DNA research, but our bananas can
-            really dance.
-          </p>
-          <a class="ui large button">I'm Still Quite Interested</a>
-        </div>
-      </div>
-
-      <div class="ui inverted vertical footer segment">
-        <div class="ui container">
-          <div
-            class="ui stackable inverted divided equal height stackable grid"
-          >
-            <div class="three wide column">
-              <h4 class="ui inverted header">About</h4>
-              <div class="ui inverted link list">
-                <a href="#" class="item">Sitemap</a>
-                <a href="#" class="item">Contact Us</a>
-                <a href="#" class="item">Religious Ceremonies</a>
-                <a href="#" class="item">Gazebo Plans</a>
-              </div>
-            </div>
-            <div class="three wide column">
-              <h4 class="ui inverted header">Services</h4>
-              <div class="ui inverted link list">
-                <a href="#" class="item">Banana Pre-Order</a>
-                <a href="#" class="item">DNA FAQ</a>
-                <a href="#" class="item">How To Access</a>
-                <a href="#" class="item">Favorite X-Men</a>
-              </div>
-            </div>
-            <div class="seven wide column">
-              <h4 class="ui inverted header">Footer Header</h4>
-              <p>
-                Extra space for a call to action inside the footer that could
-                help re-engage users.
-              </p>
-            </div>
-          </div>
+          </h2>
         </div>
       </div>
     </div>
 
-    <!-- FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+    <!-- MAIN CONTENT -->
+    <div class="ui text container">
+      <h1 class="ui inverted header">Moodsphere</h1>
+      <h2 id="quote"></h2>
+      <h4 id="author"></h4>
+    </div>
+  </div>
 
-    <!-- JAVASCRIPT, JQUERY -->
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-  </body>
+  <div class="ui vertical stripe segment"></div>
+
+  <div class="ui vertical stripe quote segment">
+    <div class="ui equal width stackable internally celled grid">
+      <div class="center aligned row">
+        <div class="column music">
+          <h3>Browse Music</h3>
+          <i class="fas fa-arrow-right"></i><strong><a href="https://open.spotify.com/playlist/6NyANZ6bIdvrrEtNFeA3SD"
+              style="text-decoration: none" style="color: black" class="option">Here are some good vibes!</a></strong>
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="column quote">
+          <h3>Healing Words and Inspiring Quotes</h3>
+
+          <i class="fas fa-arrow-right"></i>
+          <strong><a href="https://quotes-generator.com/" class="option">Find some words of wisdom.</a></strong>
+          <i class="fas fa-arrow-left"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui container">
+      <h3 class="ui header">Mental Health Hotlines</h3>
+      <li>SAMHSA National Hotline 1(800)662-4357</li>
+      <li>Anxiety and Depression Association of America (ADAA)- (240-485-1001)</li>
+      <li>Depression and Bipolar Support Alliance (DBSA) - (800-826-3632)</li>
+      <li>International OCD Foundation - (617-973-5801)</li>
+      <li>National Center of Excellence of Eating Disorders (NCEED) - (800-931-2237)</li>
+      <li>Schizophrenia and Related Disorders Alliance of America (SARDAA) -(240-423-9432)</li>
+      <li>American Foundation for Suicide Prevention - (888-333-2377)</li>
+      <li>National Domestic Violence Hotline -(800-799-7233)</li>
+      <li>Suicide Prevention Hotline -(800-273-8255)</li>
+    </div>
+  </div>
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+
+  <!-- JAVASCRIPT, JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
 </html>
