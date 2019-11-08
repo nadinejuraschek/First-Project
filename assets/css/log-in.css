@@ -9,62 +9,70 @@ COLORS
 ******************************/
 
 body {
-  background-color: #f9feff;
-  color: #373f51;
+    background: linear-gradient(red, transparent), linear-gradient(to top left, lime, transparent), linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
+    ;
 }
-body > .grid {
-  height: 100%;
+
+body>.grid {
+    height: 100%;
 }
-.ui.header {
-  color: #373f51;
-}
-.ui.button {
-  background-color: #c9f3f6;
-}
-.ui.button:hover {
-  background-color: #9ceaef;
-}
-.ui.segment {
-  background-color: #373f51;
-}
-.ui.message {
-  background-color: #373f51;
-  color: #f9feff;
-}
-.ui.input {
-  color: #373f51;
-}
+
 .image {
-  margin-top: -100px;
+    border-radius: 50%;
+    width: 300px !important;
+}
+
 
 }
+.ui.header {
+    color: #7586ac;
+    height: 400px
+}
+.ui.button {
+    background-color: #c9f3f6;
+}
+.ui.button:hover {
+    background-color: #9ceaef;
+}
+.ui.segment {
+    background-color: #353e63;
+}
+.ui.message {
+    background-color: #353e63;
+    color: #f9feff;
+}
+.ui.input {
+    color: #c7c74d;
+}
+.image {
+    margin-top: -100px;
+}
 .column {
-  max-width: 450px;
+    max-width: 450px;
 }
 #signup-btn {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 /******************************
 FORM VALIDATION
 ******************************/
 #password-error-message p {
-  text-align: left;
+    text-align: left;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
-  color: #389e6b;
+    color: #389e6b;
 }
-
 .valid:before {
-  position: relative;
-  left: -35px;
+    position: relative;
+    left: -35px;
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
-
 .invalid:before {
-  position: relative;
-  left: -35px;
+    position: relative;
+    left: -35px;
 }
