@@ -3,6 +3,9 @@ COLORS
 #D9532D#ff9665#F9B38D
 #161E18#454E45#A9ABAA
 #61afbd#8FDAE7#F5EFEA
+
+exhilirated happy moderate sad depressed
+#C1EAF1#A3E0EB#8FDAE7#76B3BE#5C8B93
 *******************************/
 
 /*******************************
@@ -13,14 +16,20 @@ NAVIGATION
 WELCOME
 *******************************/
 /* LOGO */
-#logo {width: 250px; height:250px;}
+#logo {
+  width: 250px;
+  height: 250px;
+}
 /* WEATHER */
 
 /* QUOTE */
-#quote { color: skyblue
+#quote {
+  color: skyblue;
 }
 
-#steps {border-image-width: auto;}
+#steps {
+  border-image-width: auto;
+}
 /*******************************
 DISCOVER PREVIEW
 *******************************/
@@ -100,7 +109,7 @@ a {
 }
 .footer.segment {
   padding: 5rem 0em;
-  text-align:center;
+  text-align: center;
 }
 
 /*******************************

@@ -98,7 +98,7 @@ $(document).ready(function () {
     $("#logout-btn").on("click", e => {
         auth.signOut().then(function (e) {
             // Sign-out successful.
-            window.location.replace("log-in.html");
+            window.location.replace("index.html");
         }).catch(function (e) {
             // An error happened.
             var errorMessage = e.message;
