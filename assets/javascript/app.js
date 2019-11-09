@@ -329,9 +329,28 @@ $(document).ready(function () {
     APIs
     ****************************************/
     // Weather
-    // function getWeather() {
-
-    // }
+    var APIKeyWeather = "90a3db80fa91ca69d88cc81fff6bce71"
+    var queryURLWeather =
+        "https://api.openweathermap.org/data/2.5/weather?q=Sacramento,US&appid=" +
+        APIKeyWeather;
+    function getWeather() {
+        $.ajax({
+            url: queryURLWeather,
+            method: "GET"
+        }).then(function (response) {
+            console.log(queryURLWeather);
+            console.log(response);
+            var iconWeather = $("<img class='weather-icon' src='https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png' alt='weather Sacramento, US'>");
+            console.log(response.weather[0].icon);
+            var fahrenheit = Math.round((response.main.temp * 9) / 5 - 459.67);
+            var temp = $("<p class='temp'>" + fahrenheit + "°F</p>");
+            console.log(fahrenheit);
+            displayDate();
+            $("#weather").append(iconWeather);
+            $("#weather").append(temp);
+        });
+    }
+    getWeather();
 
     // Inspirational Quote
     function getNewQuote() {
