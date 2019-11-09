@@ -193,6 +193,7 @@ $(document).ready(function () {
     // display date
     function displayDate() {
         $("#display-date").text(currentDate);
+        $("#display-date-weather").text(currentDate);
     }
     // display questions to ask user and answer options
     function displayQuestions() {
