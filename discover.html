@@ -1,67 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- SITE PROPERTIES -->
-    <title>Moodsphere - Discover</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="type/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+  <!-- SITE PROPERTIES -->
+  <title>Moodsphere - Discover</title>
 
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" type="text/css" href="assets/css/discover.css" />
-  </head>
+  <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+  <link rel="stylesheet" type="type/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/themes/material/assets/fonts/icons.woff" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
-  <body class="site">
-    <!-- NAVIGATION -->
-    <div class="ui sticky secondary pointing menu">
-      <a class="item" href="homepage.html">
-        Home
+  <!-- CUSTOM STYLESHEET -->
+  <link rel="stylesheet" type="text/css" href="assets/css/discover.css" />
+</head>
+
+<body class="site">
+  <!-- NAVIGATION -->
+  <div class="ui sticky secondary pointing menu">
+    <a class="item" href="homepage.html">
+      Home
+    </a>
+    <a id="add-entry-btn" class="item">
+      Add Entry
+    </a>
+    <a class="item" href="overview.html">
+      Overview
+    </a>
+    <a class="active item" href="discover.html">
+      Discover
+    </a>
+    <div class="right menu">
+      <a class="ui item" id="logout-btn">
+        Logout
       </a>
-      <a id="add-entry-btn" class="item">
-        Add Entry
-      </a>
-      <a class="item" href="overview.html">
-        Overview
-      </a>
-      <a class="active item" href="discover.html">
-        Discover
-      </a>
-      <div class="right menu">
-        <a class="ui item" id="logout-btn">
-          Logout
-        </a>
-      </div>
     </div>
+  </div>
 
-    <main class="site-content">
-      <!-- WATCH: VIDEOS -->
-      <h3 class="discover-section"><i class="film icon"></i> Watch</h3>
-      <!-- Slider main container -->
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <a href="https://www.youtube.com/embed/WWloIAQpMcQ">
-              <div class="ui card listen">
+  <main class="site-content">
+    <!-- WATCH: VIDEOS -->
+    <h3 class="discover-section"><i class="film icon"></i> Watch</h3>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="https://www.youtube.com/embed/WWloIAQpMcQ">
+            <div class="ui card listen">
               <div class="content">
                 <div class="center aligned header card-heading">How to Cope with Anxiety</div>
                 <div class="center aligned description card-body">
@@ -71,10 +62,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          </a>
-          <div class="swiper-slide">
-            <a href="https://youtu.be/85QY_d-8J2M">
+        </div>
+        </a>
+        <div class="swiper-slide">
+          <a href="https://youtu.be/85QY_d-8J2M">
             <div class="ui card listen">
               <div class="content">
                 <div class="center aligned header card-heading">Anxiety: A Cancer of the Mind</div>
@@ -85,10 +76,10 @@
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://youtu.be/JUedQ0_EGCQ">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://youtu.be/JUedQ0_EGCQ">
             <div class="ui card listen">
               <div class="content">
                 <div class="center aligned header card-heading">Living with High Functioning Anxiety</div>
@@ -99,51 +90,51 @@
                 </div>
               </div>
             </div>
-          </div>
-          </a>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
         </div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        </a>
+        <div class="swiper-slide">
+          <a href="https://www.youtube.com/watch?v=khkJkR-ipfw">
+            <div class="ui card listen">
+              <div class="content">
+                <div class="center aligned header card-heading">Moving Forward With Grief</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    Ted Talk by Nora McInerny
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.youtube.com/watch?v=ORs3-tRokGU">
+            <div class="ui card listen">
+              <div class="content">
+                <div class="center aligned header card-heading">Treating PTSD</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    Ted Talk by Peter Tuerk | TEDxCharleston
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-      <!-- LISTEN: MUSIC -->
-      <h3 class="discover-section"><i class="headphones icon"></i> Listen</h3>
-      <!-- Slider main container -->
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <a href="https://open.spotify.com/playlist/2EXP6pCDBdF4yRj2LZ6xFr">
+    <!-- LISTEN: MUSIC -->
+    <h3 class="discover-section"><i class="headphones icon"></i> Listen</h3>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="https://open.spotify.com/playlist/2EXP6pCDBdF4yRj2LZ6xFr">
             <div class="ui card watch">
               <div class="content">
                 <div class="center aligned header card-heading">Calming Music Playlist</div>
@@ -154,10 +145,10 @@
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://open.spotify.com/show/79GbkgP2sxA8FJ97Qk1GKZ">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://open.spotify.com/show/79GbkgP2sxA8FJ97Qk1GKZ">
             <div class="ui card watch">
               <div class="content">
                 <div class="center aligned header card-heading">Health Anxiety Podcast Show</div>
@@ -168,10 +159,10 @@
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://open.spotify.com/show/6XPm7Mr08nFVWX4Abcqmek">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://open.spotify.com/show/6XPm7Mr08nFVWX4Abcqmek">
             <div class="ui card watch">
               <div class="content">
                 <div class="center aligned header card-heading">Relaxing Tunes</div>
@@ -182,10 +173,10 @@
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://open.spotify.com/show/6925GqlCoRoCEo8UYy17FQ">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://open.spotify.com/show/6925GqlCoRoCEo8UYy17FQ">
             <div class="ui card watch">
               <div class="content">
                 <div class="center aligned header card-heading">Love Your Anxiety</div>
@@ -196,130 +187,129 @@
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="https://www.youtube.com/watch?v=YFSc7Ck0Ao0">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.youtube.com/watch?v=YFSc7Ck0Ao0">
             <div class="ui card watch">
               <div class="content">
                 <div class="center aligned header card-heading">Breathing Meditation</div>
                 <div class="center aligned description card-body">
                   <p>
-                    5-minute breathing meditation exercise guided by Diana Winston, UCLA Mindful Awareness Research Center.
+                    5-minute breathing meditation exercise guided by Diana Winston, UCLA Mindful Awareness Research
+                    Center.
                   </p>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
+          </a>
         </div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-      <!-- READ: ARTICLES -->
-      <h3 class="discover-section"><i class="book icon"></i> Read</h3>
-      <!-- Slider main container -->
-      <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <a href="#">
+    <!-- READ: ARTICLES -->
+    <h3 class="discover-section"><i class="book icon"></i> Read</h3>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm">
             <div class="ui card read">
               <div class="content">
-                <div class="center aligned header card-heading">Title</div>
+                <div class="center aligned header card-heading">A Helpful Guide to Depression</div>
                 <div class="center aligned description card-body">
                   <p>
-                    Description Description Description Description Description Description
+                    Helpful guide to coping with depression.
                   </p>
                 </div>
               </div>
             </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="swiper-slide">
-            <a href="#">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Title</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Description Description Description Description Description Description
-                  </p>
-                </div>
-              </div>
-            </div>
-            </a>
-          </div>
+          </a>
         </div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-slide">
+          <a href="https://adaa.org/tips">
+            <div class="ui card read">
+              <div class="content">
+                <div class="center aligned header card-heading">Tips For Anxiety</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    Tips on coping with anxiety.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm">
+            <div class="ui card read">
+              <div class="content">
+                <div class="center aligned header card-heading">Building Better Mental Health</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    An article about building better mental health for yourself. What to look for.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.samhsa.gov/find-help/national-helpline">
+            <div class="ui card read">
+              <div class="content">
+                <div class="center aligned header card-heading">National Helpline</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    Substance Abuse and Mental Health Services and Administration national helpline sources.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="https://www.apa.org/helpcenter/grief">
+            <div class="ui card read">
+              <div class="content">
+                <div class="center aligned header card-heading">Coping With Grief</div>
+                <div class="center aligned description card-body">
+                  <p>
+                    Lost a loved one? Coping with grief can be hard, we can help.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
-    </main>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </main>
 
-    <!-- GRAPH -->
-    <footer id="graph"></footer>
+  <!-- GRAPH -->
+  <footer id="graph"></footer>
 
-    <!-- FIREBASE -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-database.js"></script>
 
-    <!-- JAVASCRIPT, JQUERY -->
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-  </body>
+  <!-- JAVASCRIPT, JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
 </html>
