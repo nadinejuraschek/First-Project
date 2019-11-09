@@ -24,6 +24,9 @@ exhilirated happy moderate sad depressed
 /*******************************
 NAVIGATION
 *******************************/
+.ui.secondary.pointing.menu {
+  margin-bottom: 0;
+}
 .ui.secondary.pointing.menu .item {
   color: #161e18;
 }
@@ -35,7 +38,7 @@ NAVIGATION
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #61afbd;
+  border-bottom: 5px solid #61afbd;
   font-weight: 700;
   color: #61afbd;
 }
@@ -270,7 +273,6 @@ MODAL
 .answer-selected {
   background-color: #f9b38d;
 }
-
 .modal-btn {
   background-color: #61afbd;
   border: none;
@@ -284,6 +286,18 @@ MODAL
 }
 .modal-btn:hover {
   background-color: #8fdae7;
+}
+/*****************************
+OVERVIEW
+*****************************/
+#category {
+  background-color: #e7fbff;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.answers,
+.comment {
+  line-height: 2rem;
 }
 /*****************************
 MAIN SECTION
