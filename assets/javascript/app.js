@@ -20,10 +20,14 @@ $(document).ready(function () {
     database.ref().on("child_added", function (childSnapshot) {
         // add new table row
         var tr = $("<tr>");
-        tr.append($("<td><a id='modal-trigger' href='#'>" + childSnapshot.val().currentDate + "</a></td>"));
+        tr.append($("<td>" + childSnapshot.val().currentDate + "</td>"));
         console.log(childSnapshot.val().currentDate);
         tr.append($("<td style='background-color:" + childSnapshot.val().color + "'>" + childSnapshot.val().mood + "</td>"));
         console.log(childSnapshot.val().mood);
+        tr.append($("<td class='answers'>" + childSnapshot.val().ansQ1 + "<br>" + childSnapshot.val().ansQ2 + "<br>" + childSnapshot.val().ansQ3 + "<br>" + "</td>"));
+        console.log(childSnapshot.val().ansQ1 + ", " + childSnapshot.val().ansQ2 + ", " + childSnapshot.val().ansQ3);
+        tr.append($("<td style='comment'>" + childSnapshot.val().comment + "</td>"));
+        console.log(childSnapshot.val().comment);
         $("#tracker-table").append(tr);
         // Handle the errors
     }, function (errorObject) {
@@ -98,7 +102,7 @@ $(document).ready(function () {
     $("#logout-btn").on("click", e => {
         auth.signOut().then(function (e) {
             // Sign-out successful.
-            window.location.replace("log-in.html");
+            window.location.replace("index.html");
         }).catch(function (e) {
             // An error happened.
             var errorMessage = e.message;
@@ -189,14 +193,6 @@ $(document).ready(function () {
     // display date
     function displayDate() {
         $("#display-date").text(currentDate);
-    }
-    // display daily summary
-    function displayDailySummary() {
-        // access database ???
-        $("#answer-1").text(ansQ1);
-        $("#answer-2").text(ansQ2);
-        $("#answer-3").text(ansQ3);
-        $("#display-comments-overview").text(comment);
     }
     // display questions to ask user and answer options
     function displayQuestions() {
