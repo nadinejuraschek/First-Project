@@ -354,7 +354,7 @@ MODAL
 OVERVIEW
 *****************************/
 #category {
-  background-color: #e7fbff;
+  background-color: #f1f1f1;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -367,12 +367,12 @@ MAIN SECTION
 *****************************/
 .ui.table {
   margin: 0;
-  width: 60vw;
+  width: 75vw;
 }
 .table-div {
   padding: 3rem;
   margin: auto;
-  width: 60vw;
+  width: 80vw;
 }
 td {
   width: 25vw;
