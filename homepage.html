@@ -27,6 +27,10 @@
       rel="stylesheet"
       href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
     <!-- CUSTOM STYLESHEET -->
@@ -36,6 +40,8 @@
   <body>
     <!-- NAVIGATION -->
     <div class="ui sticky secondary pointing menu">
+      <img src="#" alt="Moodsphere Logo" />
+      <p class="ui header item">Moodsphere</p>
       <div class="right menu">
         <a class="active item" href="homepage.html">
           Home
@@ -57,76 +63,68 @@
 
     <div class="ui inverted vertical masthead center aligned segment">
       <div class="ui container">
-        <div class="ui large secondary inverted pointing menu">
-          <div class="right item">
-            <h2 class="ui icon header">
-              <img id="logo" src="assets/images/Mood Tracker Logo.PNG" />
-              <div class="content" style="color: white"></div>
-            </h2>
-          </div>
-        </div>
+        <div class="ui large secondary inverted pointing menu"></div>
       </div>
 
       <!-- MAIN CONTENT -->
       <div class="ui text container">
         <h1 class="ui inverted header">Moodsphere</h1>
         <h2 id="quote"></h2>
+        <hr class="short" />
         <h4 id="author"></h4>
       </div>
     </div>
 
-    <div class="ui inverted vertical footer segment">
-      <div class="ui container">
-        <h3 class="ui header">Mental Health Hotlines</h3>
-        <table class="ui selectable celled table">
-          <thead>
-            <tr>
-              <td>Hotline</td>
-              <td>Number</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>SAMHSA National Hotline</td>
-              <td>(800) 662-4357</td>
-            </tr>
-            <tr>
-              <td>Anxiety and Depression Association of America (ADAA)</td>
-              <td>(240) 485-1001</td>
-            </tr>
-            <tr>
-              <td>Depression and Bipolar Support Alliance (DBSA)</td>
-              <td>(800) 826-3632</td>
-            </tr>
-            <tr>
-              <td>International OCD Foundation</td>
-              <td>(617) 973-5801</td>
-            </tr>
-            <tr>
-              <td>National Center of Excellence of Eating Disorders (NCEED)</td>
-              <td>(800) 931-2237</td>
-            </tr>
-            <tr>
-              <td>
-                Schizophrenia and Related Disorders Alliance of America (SARDAA)
-              </td>
-              <td>(240) 423-9432</td>
-            </tr>
-            <tr>
-              <td>American Foundation for Suicide Prevention</td>
-              <td>(888) 333-2377</td>
-            </tr>
-            <tr>
-              <td>National Domestic Violence Hotline</td>
-              <td>(800) 799-7233</td>
-            </tr>
-            <tr>
-              <td>Suicide Prevention Hotline</td>
-              <td>(800) 273-8255</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="ui container hotlines">
+      <h3 class="hotlines-title">Mental Health Hotlines</h3>
+      <table id="hotlines-table" class="ui selectable celled table">
+        <thead class="hotlines-header">
+          <tr>
+            <td>Hotline</td>
+            <td>Number</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SAMHSA National Hotline</td>
+            <td>(800) 662-4357</td>
+          </tr>
+          <tr>
+            <td>Anxiety and Depression Association of America (ADAA)</td>
+            <td>(240) 485-1001</td>
+          </tr>
+          <tr>
+            <td>Depression and Bipolar Support Alliance (DBSA)</td>
+            <td>(800) 826-3632</td>
+          </tr>
+          <tr>
+            <td>International OCD Foundation</td>
+            <td>(617) 973-5801</td>
+          </tr>
+          <tr>
+            <td>National Center of Excellence of Eating Disorders (NCEED)</td>
+            <td>(800) 931-2237</td>
+          </tr>
+          <tr>
+            <td>
+              Schizophrenia and Related Disorders Alliance of America (SARDAA)
+            </td>
+            <td>(240) 423-9432</td>
+          </tr>
+          <tr>
+            <td>American Foundation for Suicide Prevention</td>
+            <td>(888) 333-2377</td>
+          </tr>
+          <tr>
+            <td>National Domestic Violence Hotline</td>
+            <td>(800) 799-7233</td>
+          </tr>
+          <tr>
+            <td>Suicide Prevention Hotline</td>
+            <td>(800) 273-8255</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <!-- FIREBASE -->
