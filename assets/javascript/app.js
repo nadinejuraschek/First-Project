@@ -39,7 +39,7 @@ $(document).ready(function () {
     ******************************/
     $("#login-btn").on("submit", e => {
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
 
         // store inputs
         var email = $("#email-input").val().trim();
@@ -62,7 +62,7 @@ $(document).ready(function () {
     $("#signup-btn").on("click", e => {
         // console.log("clicked");
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
 
         // store inputs
         var email = $("#email-input").val().trim();
@@ -193,6 +193,7 @@ $(document).ready(function () {
     // display date
     function displayDate() {
         $("#display-date").text(currentDate);
+        $("#display-date-weather").text(currentDate);
     }
     // display questions to ask user and answer options
     function displayQuestions() {
@@ -329,9 +330,28 @@ $(document).ready(function () {
     APIs
     ****************************************/
     // Weather
-    // function getWeather() {
-
-    // }
+    var APIKeyWeather = "90a3db80fa91ca69d88cc81fff6bce71"
+    var queryURLWeather =
+        "https://api.openweathermap.org/data/2.5/weather?q=Sacramento,US&appid=" +
+        APIKeyWeather;
+    function getWeather() {
+        $.ajax({
+            url: queryURLWeather,
+            method: "GET"
+        }).then(function (response) {
+            console.log(queryURLWeather);
+            console.log(response);
+            var iconWeather = $("<img class='weather-icon' src='https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png' alt='weather Sacramento, US'>");
+            console.log(response.weather[0].icon);
+            var fahrenheit = Math.round((response.main.temp * 9) / 5 - 459.67);
+            var temp = $("<p class='temp'>" + fahrenheit + "°F</p>");
+            console.log(fahrenheit);
+            displayDate();
+            $("#weather").append(iconWeather);
+            $("#weather").append(temp);
+        });
+    }
+    getWeather();
 
     // Inspirational Quote
     function getNewQuote() {

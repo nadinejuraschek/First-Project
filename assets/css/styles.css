@@ -24,11 +24,22 @@ exhilirated happy moderate sad depressed
 /*******************************
 NAVIGATION
 *******************************/
+.app-logo {
+  height: 2.25rem;
+  margin: 0.25rem 1rem;
+  width: 2.25rem;
+}
+.ui.header.item {
+  font-family: "Fira Sans", sans-serif;
+}
 .ui.secondary.pointing.menu {
   margin-bottom: 0;
 }
 .ui.secondary.pointing.menu .item {
   color: #161e18;
+}
+.ui.secondary.pointing.menu .item.app-name {
+  padding-left: 0;
 }
 .ui.secondary.pointing.menu a.item:hover {
   color: #61afbd;
@@ -62,15 +73,38 @@ WELCOME
   height: 250px;
 }
 /* WEATHER */
+#weather {
+  text-align: right;
+}
 
 /* QUOTE */
 #quote {
   color: #8fdae7;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  line-height: 3rem;
+  text-transform: uppercase;
 }
-#steps {
-  border-image-width: auto;
+.short {
+  border: none;
+  border-bottom: 2px solid #8fdae7;
+  margin: 2.5rem auto;
+  width: 8%;
 }
-
+#author {
+  color: #f5efea;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
+/* HOTLINES */
+.hotlines {
+  padding: 3rem;
+  margin: auto;
+  width: 90vw;
+}
 /*******************************
 HOMEPAGE
 *******************************/
@@ -100,13 +134,31 @@ a {
   margin-left: 0.5rem;
 }
 .masthead h1.ui.header {
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  font-family: "Fira Sans", sans-serif;
   font-size: 4rem;
 }
 .masthead h2 {
   font-size: 1.7rem;
   font-weight: normal;
+}
+.jumbotron {
+  height: 40vw; /* #1A1B1D */
+}
+.header-container {
+  margin: 2rem auto;
+  width: 70%;
+}
+#weather {
+  color: #a9abaa;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+}
+.weather-icon {
+  height: 5rem;
+  width: 5rem;
 }
 .ui.vertical.stripe {
   padding: 8rem;
@@ -134,9 +186,20 @@ a {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.footer.segment {
-  padding: 5rem 0em;
-  text-align: center;
+.hotlines-title {
+  color: #61afbd;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+#hotlines-table {
+  background-color: #e6f5f8;
+  border: none;
+  box-shadow: 1px 1px 1px #a9abaa;
+  color: #454e45;
+}
+.hotlines-header {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 700px) {
@@ -291,7 +354,7 @@ MODAL
 OVERVIEW
 *****************************/
 #category {
-  background-color: #e7fbff;
+  background-color: #f1f1f1;
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -304,12 +367,12 @@ MAIN SECTION
 *****************************/
 .ui.table {
   margin: 0;
-  width: 60vw;
+  width: 75vw;
 }
 .table-div {
   padding: 3rem;
   margin: auto;
-  width: 60vw;
+  width: 80vw;
 }
 td {
   width: 25vw;
