@@ -15,10 +15,17 @@ $(document).ready(function () {
     /****************************************
     APIs
     ****************************************/
-    // Weather
-    // function getWeather() {
+    //getWeatherData("95624");
+    //function getWeatherData(search) {
+    //  $.ajax({
+    //    url: `http://dataservice.accuweather.com/locations/v1/postalcodes/search?q=${search}/&apikey=6GMzSjhmAKdFifcP3tfNWYih2JWvFHkN`,
+    //    method: "GET"
+    // }).then(function (response) {
+    //   console.log(response);
+    //   $(".weatherData").text(response.weatherData);
+    // })
 
-    // }
+    //}
 
     // Inspirational Quote
     function getNewQuote() {
