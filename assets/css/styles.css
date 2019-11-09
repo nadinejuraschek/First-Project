@@ -25,9 +25,9 @@ exhilirated happy moderate sad depressed
 NAVIGATION
 *******************************/
 .app-logo {
-  height: 3rem;
+  height: 2.25rem;
   margin: 0.25rem 1rem;
-  width: 3rem;
+  width: 2.25rem;
 }
 .ui.header.item {
   font-family: "Fira Sans", sans-serif;
@@ -143,8 +143,22 @@ a {
   font-size: 1.7rem;
   font-weight: normal;
 }
-.ui.container {
-  height: 45vw; /* #1A1B1D */
+.jumbotron {
+  height: 40vw; /* #1A1B1D */
+}
+.header-container {
+  margin: 2rem auto;
+  width: 70%;
+}
+#weather {
+  color: #a9abaa;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+}
+.weather-icon {
+  height: 5rem;
+  width: 5rem;
 }
 .ui.vertical.stripe {
   padding: 8rem;

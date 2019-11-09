@@ -21,11 +21,22 @@ exhilirated happy moderate sad depressed
 /*****************************
 NAVIGATION
 *****************************/
+.app-logo {
+  height: 2.25rem;
+  margin: 0.25rem 1rem;
+  width: 2.25rem;
+}
+.ui.header.item {
+  font-family: "Fira Sans", sans-serif;
+}
 .ui.secondary.pointing.menu {
   margin-bottom: 0;
 }
 .ui.secondary.pointing.menu .item {
   color: #161e18;
+}
+.ui.secondary.pointing.menu .item.app-name {
+  padding-left: 0;
 }
 .ui.secondary.pointing.menu a.item:hover {
   color: #61afbd;
