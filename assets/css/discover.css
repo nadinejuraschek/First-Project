@@ -24,6 +24,10 @@ NAVIGATION
 .ui.secondary.pointing.menu .item {
   color: #161e18;
 }
+.ui.secondary.pointing.menu a.item:hover {
+  color: #61afbd;
+  font-weight: 700;
+}
 .ui.secondary.pointing.menu .active.item {
   background-color: transparent;
   -webkit-box-shadow: none;
@@ -31,6 +35,16 @@ NAVIGATION
   border-color: #61afbd;
   font-weight: 700;
   color: #61afbd;
+}
+.ui.secondary.pointing.menu a.active.item:hover {
+  color: #61afbd;
+  font-weight: 700;
+  border-color: #61afbd;
+}
+#logout-btn:hover {
+  background-color: #61afbd;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 /*****************************

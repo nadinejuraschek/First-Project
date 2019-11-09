@@ -271,7 +271,7 @@ MODAL
   background-color: #f9b38d;
 }
 
-#continue-btn {
+.modal-btn {
   background-color: #61afbd;
   border: none;
   border-radius: 10px;
@@ -282,7 +282,7 @@ MODAL
   padding: 1rem;
   text-transform: uppercase;
 }
-#continue-btn:hover {
+.modal-btn:hover {
   background-color: #8fdae7;
 }
 /*****************************
