@@ -24,9 +24,10 @@ $(document).ready(function () {
     /******************************
     AUTHENTICATION
     ******************************/
-    $("#login-btn").on("submit", e => {
+    $("#login-btn").on("click", e => {
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
+        console.log("login clicked");
 
         // store inputs
         var email = $("#email-input").val().trim();
@@ -49,7 +50,8 @@ $(document).ready(function () {
     $("#signup-btn").on("click", e => {
         // console.log("clicked");
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
+        console.log("signup clicked");
 
         // store inputs
         var email = $("#email-input").val().trim();

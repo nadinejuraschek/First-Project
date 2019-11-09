@@ -39,7 +39,7 @@ $(document).ready(function () {
     ******************************/
     $("#login-btn").on("submit", e => {
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
 
         // store inputs
         var email = $("#email-input").val().trim();
@@ -62,7 +62,7 @@ $(document).ready(function () {
     $("#signup-btn").on("click", e => {
         // console.log("clicked");
         // keep button from sending form somewhere
-        event.preventDefault();
+        e.preventDefault();
 
         // store inputs
         var email = $("#email-input").val().trim();

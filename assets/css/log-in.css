@@ -16,17 +16,13 @@ body > .grid {
   height: 400px;
 }
 .ui.button {
-  background-color: #c9f3f6;
+  background-color: #9ceaef;
 }
 .ui.button:hover {
-  background-color: #9ceaef;
+  background-color: #c7c74d;
 }
 .ui.segment {
   background-color: #353e63;
-}
-.ui.message {
-  background-color: #353e63;
-  color: #f9feff;
 }
 .ui.input {
   color: #c7c74d;
@@ -37,28 +33,31 @@ body > .grid {
 .column {
   max-width: 450px;
 }
+#login-btn {
+  background-color: ;
+}
 #signup-btn {
   margin-left: 8px;
 }
-
-/******************************
-FORM VALIDATION
-******************************/
-#password-error-message p {
-  text-align: left;
+.login-logo {
+  display: inline-block;
+  height: 5rem;
+  weight: 5rem;
 }
-
-/* Add a green text color and a checkmark when the requirements are right */
-.valid {
-  color: #389e6b;
+.login-heading {
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 5rem;
+  line-height: 5rem;
+  margin-left: 2rem;
 }
-.valid:before {
-  position: relative;
-  left: -35px;
+.content {
+  margin: 5rem auto;
+  width: 50%;
 }
-
-/* Add a red text color and an "x" icon when the requirements are wrong */
-.invalid:before {
-  position: relative;
-  left: -35px;
+.login-logo-div {
+  text-align: center;
+  line-height: 5rem;
+  margin-bottom: 2rem;
 }
