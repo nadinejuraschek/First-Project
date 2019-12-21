@@ -18,67 +18,22 @@ $(document).ready(function () {
     const auth = firebase.auth();
     // Firebase watcher + initial loader
     database.ref().on("child_added", function (childSnapshot) {
-        // add new table row
-        var tr = $("<tr>");
-        tr.append($("<td>" + childSnapshot.val().currentDate + "</td>"));
-        console.log(childSnapshot.val().currentDate);
-        tr.append($("<td style='background-color:" + childSnapshot.val().color + "'>" + childSnapshot.val().mood + "</td>"));
-        console.log(childSnapshot.val().mood);
-        tr.append($("<td class='answers'>" + childSnapshot.val().ansQ1 + "<br>" + childSnapshot.val().ansQ2 + "<br>" + childSnapshot.val().ansQ3 + "<br>" + "</td>"));
-        console.log(childSnapshot.val().ansQ1 + ", " + childSnapshot.val().ansQ2 + ", " + childSnapshot.val().ansQ3);
-        tr.append($("<td style='comment'>" + childSnapshot.val().comment + "</td>"));
-        console.log(childSnapshot.val().comment);
-        $("#tracker-table").append(tr);
+        if (childSnapshot.val().email == firebase.auth().currentUser.email) {
+            // add new table row
+            var tr = $("<tr>");
+            tr.append($("<td>" + childSnapshot.val().currentDate + "</td>"));
+            console.log(childSnapshot.val().currentDate);
+            tr.append($("<td style='background-color:" + childSnapshot.val().color + "'>" + childSnapshot.val().mood + "</td>"));
+            console.log(childSnapshot.val().mood);
+            tr.append($("<td class='answers'>" + childSnapshot.val().ansQ1 + "<br>" + childSnapshot.val().ansQ2 + "<br>" + childSnapshot.val().ansQ3 + "<br>" + "</td>"));
+            console.log(childSnapshot.val().ansQ1 + ", " + childSnapshot.val().ansQ2 + ", " + childSnapshot.val().ansQ3);
+            tr.append($("<td style='comment'>" + childSnapshot.val().comment + "</td>"));
+            console.log(childSnapshot.val().comment);
+            $("#tracker-table").append(tr);
+        }
         // Handle the errors
     }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);
-    });
-
-    /******************************
-    AUTHENTICATION
-    ******************************/
-    $("#login-btn").on("submit", e => {
-        // keep button from sending form somewhere
-        e.preventDefault();
-
-        // store inputs
-        var email = $("#email-input").val().trim();
-        var password = $("#password-input").val().trim();
-
-        // Firebase Sign In Function
-        var promise = auth.signInWithEmailAndPassword(email, password)
-        promise.then(function (e) {
-            window.location.replace("homepage.html");
-        })
-            .catch(function (e) {
-                // Handle Errors here.
-                var errorCode = e.code;
-                var errorMessage = e.message;
-                // display error message
-                alert("This user does not exist. Please sign up.");
-            });
-    });
-
-    $("#signup-btn").on("click", e => {
-        // console.log("clicked");
-        // keep button from sending form somewhere
-        e.preventDefault();
-
-        // store inputs
-        var email = $("#email-input").val().trim();
-        console.log(email);
-        var password = $("#password-input").val().trim();
-        console.log(password);
-        var promise = auth.createUserWithEmailAndPassword(email, password);
-        promise.then(function (e) {
-            window.location.replace("homepage.html");
-        })
-            .catch(function (e) {
-                // Handle Errors here.
-                var errorCode = e.code;
-                var errorMessage = e.message;
-                alert(errorCode + ": " + errorMessage);
-            });
     });
 
     auth.onAuthStateChanged(function (user) {
@@ -282,7 +237,10 @@ $(document).ready(function () {
         console.log("user comments: " + comment);
         // store user selection and input
         // push to firebase database
+        var user = firebase.auth().currentUser;
+        console.log(user);
         database.ref().push({
+            email: user.email,
             currentDate: currentDate,
             mood: mood,
             color: color,

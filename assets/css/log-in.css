@@ -1,11 +1,5 @@
 body {
-  background: linear-gradient(red, transparent),
-    linear-gradient(to top left, lime, transparent),
-    linear-gradient(to top right, blue, transparent);
-  background-blend-mode: screen;
-}
-body > .grid {
-  height: 100%;
+  height: 90vh;
 }
 .image {
   border-radius: 50%;
@@ -23,6 +17,7 @@ body > .grid {
 }
 .ui.segment {
   background-color: #353e63;
+  border-radius: 0.8rem;
 }
 .ui.input {
   color: #c7c74d;
@@ -34,10 +29,11 @@ body > .grid {
   max-width: 450px;
 }
 #login-btn {
-  background-color: ;
+  font-size: 1.5rem;
 }
 #signup-btn {
-  margin-left: 8px;
+  font-size: 1.25rem;
+  margin: 2rem 2.5rem 0;
 }
 .login-logo {
   display: inline-block;
@@ -45,7 +41,7 @@ body > .grid {
   weight: 5rem;
 }
 .login-heading {
-  color: #ffffff;
+  color: #61AFBD;
   display: inline-block;
   font-family: "Fira Sans", sans-serif;
   font-size: 5rem;
@@ -60,4 +56,29 @@ body > .grid {
   text-align: center;
   line-height: 5rem;
   margin-bottom: 2rem;
+}
+.message {
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.footer {
+  background-color: #ffffff;
+  height: 6.5rem;
+  width: 100%;
+}
+a.item {
+  color: #61AFBD;
+}
+.divider-line {
+  color: #61AFBD;
+  font-weight: 800;
+  margin: 0 1.5rem;
+}
+.copyright {
+  color: #61AFBD;
+  font-size: 0.8rem;
+  margin: 1rem auto 1.5rem;
 }
