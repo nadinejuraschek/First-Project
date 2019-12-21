@@ -10,17 +10,17 @@ body {
   height: 400px;
 }
 .ui.button {
-  background-color: #9ceaef;
+  background-color: #F9B38D;
 }
 .ui.button:hover {
-  background-color: #c7c74d;
+  background-color: #9ceaef;
 }
 .ui.segment {
   background-color: #353e63;
   border-radius: 0.8rem;
 }
 .ui.input {
-  color: #c7c74d;
+  color: #F9B38D;
 }
 .image {
   margin-top: -100px;
