@@ -65,7 +65,7 @@ NAVIGATION
 }
 
 /*******************************
-WELCOME
+WELCOME / HOMEPAGE
 *******************************/
 /* JUMBOTRON */
 .ui.masthead.segment {
@@ -76,11 +76,20 @@ WELCOME
   border-radius: 0;
   box-shadow: none;
   margin: 0;
+  min-height: 80vh;
+  padding: 1rem 0;
   text-align: center;
+}
+.header-container {
+  margin: 2rem auto;
+  width: 80%;
 }
 .ui.header.welcome {
   color: #ffffff;
-  font-size: 5rem;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 /* LOGO */
 #logo {
@@ -89,9 +98,16 @@ WELCOME
 }
 /* WEATHER */
 #weather {
+  color: #a9abaa;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
   text-align: right;
 }
-
+.weather-icon {
+  height: 5rem;
+  width: 5rem;
+}
 /* QUOTE */
 #quote {
   color: #8fdae7;
@@ -114,83 +130,6 @@ WELCOME
   letter-spacing: 2px;
   line-height: 2rem;
 }
-/* HOTLINES */
-.hotlines {
-  padding: 3rem;
-  margin: auto;
-  width: 90vw;
-}
-/*******************************
-HOMEPAGE
-*******************************/
-a {
-  text-decoration: none;
-  color: inherit;
-}
-.option:hover {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-  border: 3px solid black;
-  border-radius: 5px;
-  padding: 4px;
-}
-.masthead.segment {
-  min-height: 700px;
-  padding: 1rem 0;
-}
-.masthead .logo.item img {
-  margin-right: 1rem;
-}
-.masthead .ui.menu .ui.button {
-  margin-left: 0.5rem;
-}
-.masthead h1.ui.header {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 4rem;
-}
-.masthead h2 {
-  font-size: 1.7rem;
-  font-weight: normal;
-}
-.jumbotron {
-  height: 40vw;
-}
-.header-container {
-  margin: 2rem auto;
-  width: 70%;
-}
-#weather {
-  color: #a9abaa;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.75rem;
-}
-.weather-icon {
-  height: 5rem;
-  width: 5rem;
-}
-.ui.vertical.stripe {
-  padding: 8rem;
-}
-.ui.vertical.stripe h3 {
-  font-size: 2rem;
-}
-.ui.vertical.stripe .button + h3,
-.ui.vertical.stripe p + h3 {
-  margin-top: 3rem;
-}
-.ui.vertical.stripe .floated.image {
-  clear: both;
-}
-.ui.vertical.stripe p {
-  font-size: 1.33rem;
-}
-.ui.vertical.stripe .horizontal.divider {
-  margin: 3rem 0;
-}
 .quote.stripe.segment {
   padding: 0;
 }
@@ -198,8 +137,18 @@ a {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
-.ui.container.hotlines {
+/* ARROW */
+.angle.down.icon {
+  margin-top: 2rem;
+  color: #a9abaa;
+  font-size: 3rem;
+}
+/* HOTLINES */
+.hotlines {
+  padding: 3rem;
+  margin: auto;
   margin-bottom: 1.5rem;
+  width: 90vw;
 }
 .hotlines-title {
   color: #61afbd;
@@ -215,30 +164,6 @@ a {
 .hotlines-header {
   font-size: 1.25rem;
   font-weight: 700;
-}
-
-@media only screen and (max-width: 700px) {
-  .ui.fixed.menu {
-    display: none !important;
-  }
-  .secondary.pointing.menu .item,
-  .secondary.pointing.menu .menu {
-    display: none;
-  }
-  .secondary.pointing.menu .toc.item {
-    display: block;
-  }
-  .masthead.segment {
-    min-height: 350px;
-  }
-  .masthead h1.ui.header {
-    font-size: 2em;
-    margin-top: 1.5em;
-  }
-  .masthead h2 {
-    margin-top: 0.5em;
-    font-size: 1.5em;
-  }
 }
 
 /*****************************
