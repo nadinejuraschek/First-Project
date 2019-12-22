@@ -13,7 +13,6 @@ exhilirated happy moderate sad depressed
   flex-direction: column;
   color: #161e18;
 }
-
 .site-content {
   flex: 1;
   display: flex;
@@ -217,7 +216,7 @@ MODAL
   background-color: #161e1840; /* Black w/ opacity */
 }
 #mood-states {
-  margin: auto;
+  margin: 2rem auto 0;
 }
 .column {
   text-align: center;
@@ -226,31 +225,31 @@ MODAL
   border: none;
   border-radius: 50%;
   box-shadow: 1px 1px 2px #a9abaa;
-  height: 50px;
-  width: 50px;
+  height: 4.5rem;
+  width: 4.5rem;
 }
 .button-clicked {
-  height: 65px;
-  width: 65px;
+  height: 4.25rem;
+  width: 4.25rem;
 }
 .mood-text {
   font-size: 1.25rem;
   margin-top: 1rem;
 }
 #exhilirated {
-  background-color: #c1eaf1;
+  background-color: #9fee5f;
 }
 #happy {
-  background-color: #a3e0eb;
+  background-color: #c0eba3;
 }
 #moderate {
-  background-color: #8fdae7;
+  background-color: #f9b38d;
 }
 #sad {
-  background-color: #76b3be;
+  background-color: #76B3BE;
 }
 #depressed {
-  background-color: #5c8b93;
+  background-color: #2d484d;
 }
 .question {
   font-size: 1.5rem;
@@ -265,7 +264,7 @@ MODAL
   display: block;
   font-size: 1.25rem;
   margin: 1rem 0;
-  padding: 0.5rem;
+  padding: 0.25rem;
   width: 50%;
 }
 .answer-opt-1:hover,
@@ -303,6 +302,7 @@ OVERVIEW
 .comment {
   line-height: 2rem;
 }
+
 /*****************************
 MAIN SECTION
 *****************************/
@@ -362,8 +362,9 @@ GRAPH
 .hide {
   display: none;
 }
+
 /*****************************
-APIs
+DISCOVER
 *****************************/
 .ui.card {
   background-repeat: no-repeat;

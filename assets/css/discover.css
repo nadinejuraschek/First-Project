@@ -12,12 +12,11 @@ exhilirated happy moderate sad depressed
   min-height: 100vh;
   flex-direction: column;
 }
-
 .site-content {
-  height: 80vw;
-  overflow-y: scroll;
   padding: 0 5rem;
+  margin-bottom: 3rem;
 }
+
 /*****************************
 NAVIGATION
 *****************************/
@@ -33,7 +32,7 @@ NAVIGATION
   margin-bottom: 0;
 }
 .ui.secondary.pointing.menu .item {
-  color: #161e18;
+  color: #a0sdfj;
 }
 .ui.secondary.pointing.menu .item.app-name {
   padding-left: 0;
@@ -100,27 +99,37 @@ MAIN SECTION
   /* Typography */
   text-align: center;
 }
-
 button {
   /* Box-model */
   width: 200px;
   height: 100px;
 }
-
-.swiper-button-prev {
-  color: #000;
-}
-
+.swiper-button-prev,
 .swiper-button-next {
-  color: #000;
+  color: #61AFBD;
+  font-weight: 800;
 }
 
 /*****************************
-GRAPH
+FOOTER
 *****************************/
-#graph {
-  border-top: 2px solid #22242615;
-  height: 20vw;
+.footer {
+  background-color: #ffffff;
+  height: 6.5rem;
+  width: 100%;
+}
+a.item {
+  color: #61AFBD;
+}
+.divider-line {
+  color: #61AFBD;
+  font-weight: 800;
+  margin: 0 1.5rem;
+}
+.copyright {
+  color: #61AFBD;
+  font-size: 0.8rem;
+  margin: 1rem auto 1.5rem;
 }
 
 /*****************************
