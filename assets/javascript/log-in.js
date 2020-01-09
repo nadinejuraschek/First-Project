@@ -20,6 +20,8 @@ $(document).ready(function () {
     ******************************/
     const database = firebase.database();
     const auth = firebase.auth();
+    var email = "";
+    var password = "";
 
     /******************************
     AUTHENTICATION
@@ -30,8 +32,8 @@ $(document).ready(function () {
         console.log("login clicked");
 
         // store inputs
-        var email = $("#email-input").val().trim();
-        var password = $("#password-input").val().trim();
+        email = $("#email-input").val().trim();
+        password = $("#password-input").val().trim();
 
         // Firebase Sign In Function
         var promise = auth.signInWithEmailAndPassword(email, password)
@@ -54,9 +56,9 @@ $(document).ready(function () {
         console.log("signup clicked");
 
         // store inputs
-        var email = $("#email-input").val().trim();
+        email = $("#email-input").val().trim();
         console.log(email);
-        var password = $("#password-input").val().trim();
+        password = $("#password-input").val().trim();
         console.log(password);
         var promise = auth.createUserWithEmailAndPassword(email, password);
         promise.then(function (e) {
