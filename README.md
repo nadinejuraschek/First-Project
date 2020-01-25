@@ -14,7 +14,6 @@ Our web application will...
 * display the current date, weather, and an inspirational quote on a homepage
 * prompt users with questions about their current mental state and let them add comments to each entry
 * display all entries in an overview table
-* display mood states of all entries in a graph
 * offer resources to watch, listen, and read in a discover section
 
 ### Motivation
@@ -42,3 +41,14 @@ Mental Health awareness is becoming more and more prevalent in today's culture a
     * bcryptjs
 
 * mongoDB
+
+### Further Development Goals
+[] display mood states of all entries in a graph
+[] fix discover section:
+    [] styling should match
+    [] set up swiper to work with node
+[] set up database for user to add entries
+[] merge old javascript files/logic to work in new node setup
+[] create own database of inspirational quotes
+[] add a user profile page
+[] add alternative sign up methods
