@@ -43,12 +43,12 @@ Mental Health awareness is becoming more and more prevalent in today's culture a
 * mongoDB
 
 ### Further Development Goals
-[] display mood states of all entries in a graph
-[] fix discover section:
-    [] styling should match
-    [] set up swiper to work with node
-[] set up database for user to add entries
-[] merge old javascript files/logic to work in new node setup
-[] create own database of inspirational quotes
-[] add a user profile page
-[] add alternative sign up methods
+* display mood states of all entries in a graph
+* fix discover section:
+    * styling should match
+    * set up swiper to work with node
+* set up database for user to add entries
+* merge old javascript files/logic to work in new node setup
+* create own database of inspirational quotes
+* add a user profile page
+* add alternative sign up methods
