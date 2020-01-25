@@ -30,6 +30,15 @@ Mental Health awareness is becoming more and more prevalent in today's culture a
 
 * Semantic UI
 
-* Google Firebase  
-    * Authentication
-    * Realtime Database
+* Node.js
+    * express
+    * express-session
+    * ejs
+    * dotenv
+    * mongoose
+    * passport
+    * passport-local
+    * passport-local-mongoose
+    * bcryptjs
+
+* mongoDB
