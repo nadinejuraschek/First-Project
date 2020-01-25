@@ -19,9 +19,9 @@ exhilirated happy moderate sad depressed
   align-items: center;
   justify-content: center;
 }
-
+  
 /*******************************
-NAVIGATION
+  NAVIGATION
 *******************************/
 .app-logo {
   height: 2.25rem;
@@ -62,13 +62,13 @@ NAVIGATION
   color: #ffffff;
   font-weight: 700;
 }
-
+  
 /*******************************
-WELCOME / HOMEPAGE
+  WELCOME / HOMEPAGE
 *******************************/
 /* JUMBOTRON */
 .ui.masthead.segment {
-  background-image: linear-gradient(#353e6399, #353e6399), url(../images/zen-dandelion.jpg);
+  background-image: linear-gradient(#353e6399, #353e6399), url(/assets/images/zen-dandelion.jpg);
   background-size: cover;
   background-position: center bottom;
   border: none;
@@ -164,9 +164,9 @@ WELCOME / HOMEPAGE
   font-size: 1.25rem;
   font-weight: 700;
 }
-
+  
 /*****************************
-MODAL
+  MODAL
 *****************************/
 /* DAILY SUMMARY */
 #summary-modal {
@@ -194,14 +194,13 @@ MODAL
   font-size: 28px;
   font-weight: bold;
 }
-
 .close:hover,
-.close:focus {
+  .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-
+  
 /* ADD ENTRY */
 #add-entry-modal {
   display: none; /* Hidden by default */
@@ -256,8 +255,8 @@ MODAL
   margin: 1.5rem 0;
 }
 .answer-opt-1,
-.answer-opt-2,
-.answer-opt-3 {
+  .answer-opt-2,
+  .answer-opt-3 {
   border: 3px solid #f9b38d;
   border-radius: 10px;
   color: #000;
@@ -268,12 +267,10 @@ MODAL
   width: 50%;
 }
 .answer-opt-1:hover,
-.answer-opt-2:hover,
-.answer-opt-3:hover {
-  background-color: #f9b38d;
-}
-.answer-selected {
-  background-color: #f9b38d;
+  .answer-opt-2:hover,
+  .answer-opt-3:hover,
+  .answer-selected {
+    background-color: #f9b38d;
 }
 .modal-btn {
   background-color: #61afbd;
@@ -289,9 +286,9 @@ MODAL
 .modal-btn:hover {
   background-color: #8fdae7;
 }
-
+  
 /*****************************
-OVERVIEW
+  OVERVIEW
 *****************************/
 #category {
   background-color: #f1f1f1;
@@ -299,12 +296,12 @@ OVERVIEW
   font-weight: 700;
 }
 .answers,
-.comment {
+  .comment {
   line-height: 2rem;
 }
-
+  
 /*****************************
-MAIN SECTION
+  MAIN SECTION
 *****************************/
 .ui.table {
   margin: 0;
@@ -329,9 +326,9 @@ hr {
   margin: auto;
   width: 90vw;
 }
-
+  
 /*****************************
-FOOTER
+  FOOTER
 *****************************/
 .footer {
   background-color: #ffffff;
@@ -351,9 +348,9 @@ a.item {
   font-size: 0.8rem;
   margin: 1rem auto 1.5rem;
 }
-
+  
 /*****************************
-GRAPH
+  GRAPH
 *****************************/
 #graph {
   border-top: 2px solid #22242615;
@@ -362,9 +359,9 @@ GRAPH
 .hide {
   display: none;
 }
-
+  
 /*****************************
-DISCOVER
+  DISCOVER
 *****************************/
 .ui.card {
   background-repeat: no-repeat;
@@ -397,13 +394,10 @@ DISCOVER
   margin-top: 15px;
 }
 #buttons {
-  /* Positioning */
   margin: 50px 0;
-  /* Typography */
   text-align: center;
 }
 button {
-  /* Box-model */
   width: 200px;
   height: 100px;
 }
@@ -412,4 +406,36 @@ button {
 }
 .swiper-button-next {
   color: #454e45;
+}
+
+/*****************************
+  ERROR
+*****************************/
+.centered {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+.error-quote {
+  color: #353e63;
+  font-size: 1.75rem;
+  font-weight: 300;
+  letter-spacing: 6px;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+}
+.error-author {
+  color: #8fdae7;
+  font-size: 1.25rem;
+}
+.new-path {
+  margin-top: 4rem;
+  text-align: center;
+}
+.new-path-link {
+  color: #8fdae7;
+  font-size: 4rem;
+}
+.new-path-link:hover {
+  color: #353e63;
 }
