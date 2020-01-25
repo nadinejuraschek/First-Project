@@ -22,6 +22,12 @@ app.set('view engine', 'ejs');
 // ============================
 // SERVER
 // ============================
+
+// catch all route
+app.get('*', function(req, res){
+    res.render('error');
+});
+
 // server logic
 app.listen(process.env.PORT, function(){
     console.log('Server is listening on PORT ' + process.env.PORT + '.');
