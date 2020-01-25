@@ -1,0 +1,25 @@
+{
+  "name": "moodsphere",
+  "version": "1.0.0",
+  "description": "### Team of Developers * [Nadine Juraschek](https://github.com/nadinejuraschek) * [Morgan McMilin](https://github.com/Morganatic) * [Caitlin Phillips](https://github.com/Caitlin3410) * [Loralee Smith](https://github.com/LoraleeSmith)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadinejuraschek/Moodsphere.git"
+  },
+  "author": "Nadine Juraschek, Loralee Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadinejuraschek/Moodsphere/issues"
+  },
+  "homepage": "https://github.com/nadinejuraschek/Moodsphere#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9"
+  }
+}
