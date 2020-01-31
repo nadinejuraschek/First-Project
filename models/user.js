@@ -5,7 +5,13 @@ const   mongoose                = require('mongoose'),
 const UserSchema = new mongoose.Schema({
     email: String,
     username: String,
-    password: String
+    password: String,
+    entries: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Log'
+        }
+    ]
 });
 
 UserSchema.plugin(passportLocalMongoose);

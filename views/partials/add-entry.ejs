@@ -117,10 +117,19 @@
       <div class="ui form">
         <div class="field">
           <h3 class="heading">Additional Comments:</h3>
-          <textarea id="userComment"></textarea>
-          <button type="submit" id="continue-btn" class="modal-btn">
-            Continue
-          </button>
+          <div class="ui grid">
+            <div class="fourteen wide column">
+              <textarea id="userComment"></textarea>
+            </div>
+            <div class="two wide column btn-col">
+              <a id="add-comment"><i class="plus square icon"></i></a>
+            </div>
+          </div>
+          <div class="btn-right">
+            <button method="POST" type="submit" id="continue-btn" class="modal-btn">
+              Continue
+            </button>
+          </div>
         </div>
       </div>
     </div>

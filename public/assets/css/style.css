@@ -119,7 +119,7 @@ exhilirated happy moderate sad depressed
 .short {
   border: none;
   border-bottom: 2px solid #8fdae7;
-  margin: 2.5rem auto;
+  margin: 4rem auto;
   width: 8%;
 }
 #author {
@@ -136,9 +136,23 @@ exhilirated happy moderate sad depressed
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+/* ADD ENTRY */
+#add-entry-btn {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  color: #61afbd;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+#add-entry-btn:hover {
+  background-color: #61afbd;
+  color: #ffffff;
+}
 /* ARROW */
 .angle.down.icon {
-  margin-top: 2rem;
+  margin-top: 4rem;
   color: #a9abaa;
   font-size: 3rem;
 }
@@ -262,6 +276,7 @@ exhilirated happy moderate sad depressed
   color: #000;
   display: block;
   font-size: 1.25rem;
+  height: 2.5rem;
   margin: 1rem 0;
   padding: 0.25rem;
   width: 50%;
@@ -286,7 +301,29 @@ exhilirated happy moderate sad depressed
 .modal-btn:hover {
   background-color: #8fdae7;
 }
-  
+.ui .grid {
+  height: 10rem;
+}
+#userComment {
+  height: 4rem;
+}
+.btn-col {
+  text-align: left;
+}
+#add-comment { 
+  color: #61afbd;
+  font-size: 2rem;
+  margin: auto;
+}
+#add-comment:hover {
+  color: #8fdae7;
+}
+.btn-right {
+  text-align: right;
+}
+#continue-btn {
+  height: 3.5rem;
+}
 /*****************************
   OVERVIEW
 *****************************/
