@@ -10,7 +10,17 @@
     />
 
     <!-- SITE PROPERTIES -->
-    <title>Moodsphere</title>
+    <% if (title === 'Home') { %>
+    <title>Moodsphere - Home</title>
+    <% } else if (title === 'Overview') { %>
+    <title>Moodsphere - Overview</title>
+    <% } else if (title === 'Discover') { %>
+    <title>Moodsphere - Discover</title>
+    <% } else if (title === 'LogIn') { %>
+    <title>Moodsphere - Log In</title>
+    <% } else if (title === 'SignUp') { %>
+    <title>Moodsphere - Sign Up</title>
+    <% } %>
 
     <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
     <link
@@ -29,7 +39,13 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
     <!-- CUSTOM STYLESHEET -->
+    <% if (title === 'Home' || title === 'Overview') { %>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <% } else if (title === 'Discover') { %>
+    <link rel="stylesheet" type="text/css" href="/assets/css/discover.css" />
+    <% } else if (title === 'LogIn' || title === 'SignUp') { %>
+    <link rel="stylesheet" type="text/css" href="assets/css/log-in.css" />
+    <% } %>
   </head>
 
   <body>

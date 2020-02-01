@@ -5,7 +5,7 @@ const   express   = require('express');
 
 // handle sign up logic
 router.get('/signup', function(req, res){
-    res.render('signup', {title: 'Register'});
+    res.render('signup', {title: 'SignUp'});
 });
 router.post('/signup', function(req, res){
     const newUser = new User({
@@ -15,7 +15,7 @@ router.post('/signup', function(req, res){
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             console.log("Something went wrong: " + err);
-            return res.render('signup');
+            return res.render('signup', {title: 'SignUp'});
         }
         passport.authenticate('local')(req, res, function(){
             console.log('User is logged in.');
@@ -26,7 +26,7 @@ router.post('/signup', function(req, res){
 
 // login logic
 router.get('/login', function(req, res){
-    res.render('log-in', {title: 'Login'});
+    res.render('log-in', {title: 'LogIn'});
 });
 router.post('/login', passport.authenticate('local', 
     { 

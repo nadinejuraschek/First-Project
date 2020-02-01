@@ -3,7 +3,7 @@ const   express     = require('express');
         mongoose    = require('mongoose'),
         User        = require('../models/user'),
         Log         = require('../models/log'),
-        Question      = require('../models/modal'),
+        Question    = require('../models/modal'),
         Quotes      = require('../models/quotes');
 
 // redirect user to /login or /home when visiting /
