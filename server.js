@@ -1,10 +1,12 @@
 // NPM PACKAGES
 require('dotenv').config();
 const   express         = require('express'),
+        path            = require('path'),
         mongoose        = require('mongoose'),
         passport        = require('passport'),
         LocalStrategy   = require('passport-local'),
         ejs             = require('ejs'),
+        favicon         = require('serve-favicon'),
         app             = express(),
         User            = require('./models/user'),
         Log             = require('./models/log');
@@ -19,6 +21,7 @@ mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopolo
 
 // EXPRESS SETUP
 app.use(express.static('public'));
+app.use(favicon(path.join(__dirname, 'public/assets/images', 'favicon.ico')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
