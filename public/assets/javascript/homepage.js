@@ -22,7 +22,10 @@ $(document).ready(function () {
         method: "GET"
         }).then(function (response) {
         console.log(response);
-        $(".weatherData").text(response.weatherData);
+        let fahrenheit = Math.round((response.main.temp * 9) / 5 - 459.67);
+        let temp = fahrenheit + '°F';
+        $("#weather-icon").attr('src', 'https://openweathermap.org/img/wn/' + response.weather[0].icon + '.png');
+        $("#temp").text(temp);
         });
     };
 

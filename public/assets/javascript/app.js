@@ -78,30 +78,20 @@ $(document).ready(function () {
     APIs
     ****************************************/
     // Weather
-    let APIKeyWeather = "90a3db80fa91ca69d88cc81fff6bce71"
-    let queryURLWeather =
-        "https://api.openweathermap.org/data/2.5/weather?q=Sacramento,US&appid=" +
-        APIKeyWeather;
-    function getWeather() {
+    function getWeather(search) {
         $.ajax({
-            url: queryURLWeather,
-            method: "GET"
+        url: `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=90a3db80fa91ca69d88cc81fff6bce71`,
+        method: "GET"
         }).then(function (response) {
-            // console.log(queryURLWeather);
-            // console.log(response);
-            // let iconWeather = $("<img id='weather-icon' src='https://openweathermap.org/img/wn/" + response.weather[0].icon + ".png' alt='weather Sacramento, US'>");
-            let weatherIcon = response.weather[0].icon;
-            let weatherSrc = 'https://openweathermap.org/img/wn/' + weatherIcon + '.png';
-            console.log(weatherSrc);
-            let fahrenheit = Math.round((response.main.temp * 9) / 5 - 459.67);
-            let temp = fahrenheit + '°F';
-            console.log(temp);
-            displayDate();
-            // $("#weather-icon").attr('src', 'https://openweathermap.org/img/wn/' + weatherIcon + '.png');
-            $("#temp").text(temp);
+        let iconSrc = 'https://openweathermap.org/img/wn/' + response.weather[0].icon + '.png';
+        let temp = Math.round((response.main.temp * 9) / 5 - 459.67);
+        console.log(iconSrc);
+        console.log(temp);
+        $('#weather-icon').attr('src', iconSrc);
+        $('#temp').text(temp + '°F');
         });
-    }
-    getWeather();
+    };
+    getWeather("Sacramento,US");
 
     // Inspirational Quote
     function getNewQuote() {

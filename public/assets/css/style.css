@@ -96,16 +96,23 @@ exhilirated happy moderate sad depressed
   height: 250px;
 }
 /* WEATHER */
-#weather {
+.weather {
   color: #a9abaa;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: 0.75rem;
   text-align: right;
 }
-.weather-icon {
+#weather-icon {
   height: 5rem;
   width: 5rem;
+}
+#temp {
+  color: #a9abaa;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.75rem;
+  text-align: right;
 }
 /* QUOTE */
 #quote {
