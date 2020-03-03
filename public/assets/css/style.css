@@ -250,8 +250,8 @@ exhilirated happy moderate sad depressed
   width: 4.5rem;
 }
 .button-clicked {
-  height: 4.25rem;
-  width: 4.25rem;
+  height: 7rem;
+  width: 7rem;
 }
 .mood-text {
   font-size: 1.25rem;
@@ -274,7 +274,8 @@ exhilirated happy moderate sad depressed
 }
 .question {
   font-size: 1.5rem;
-  margin: 1.5rem 0;
+  font-weight: 800;
+  margin: 4rem 0 2rem 0;
 }
 .answer-opt-1,
   .answer-opt-2,
@@ -285,9 +286,9 @@ exhilirated happy moderate sad depressed
   display: block;
   font-size: 1.25rem;
   height: 2.5rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
   padding: 0.25rem;
-  width: 50%;
+  width: 75%;
 }
 .answer-opt-1:hover,
   .answer-opt-2:hover,
