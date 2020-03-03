@@ -20,6 +20,10 @@
     <title>Moodsphere - Log In</title>
     <% } else if (title === 'SignUp') { %>
     <title>Moodsphere - Sign Up</title>
+    <% } else if (title === 'Entry') { %>
+    <title>Moodsphere - Entry</title>
+    <% } else { %>
+    <title>Moodsphere</title>
     <% } %>
 
     <!-- STYLESHEETS: SEMANTIC UI, ICONS -->
@@ -39,7 +43,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
     <!-- CUSTOM STYLESHEET -->
-    <% if (title === 'Home' || title === 'Overview') { %>
+    <% if (title === 'Home' || title === 'Overview' || title === 'Entry') { %>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <% } else if (title === 'Discover') { %>
     <link rel="stylesheet" type="text/css" href="/assets/css/discover.css" />

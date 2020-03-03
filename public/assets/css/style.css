@@ -145,6 +145,7 @@ exhilirated happy moderate sad depressed
   font-size: 1.25rem;
   font-weight: 700;
   padding: 1rem;
+  margin-top: 4rem;
 }
 #add-entry-btn:hover {
   background-color: #61afbd;

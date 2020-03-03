@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nadinejuraschek/Moodsphere#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",

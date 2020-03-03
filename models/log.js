@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+const   mongoose                = require('mongoose'),
+        passportLocalMongoose   = require('passport-local-mongoose');
 
 const LogSchema = new mongoose.Schema({
     date: Date,
@@ -9,4 +10,8 @@ const LogSchema = new mongoose.Schema({
     comment: String
 });
 
-module.exports = mongoose.model('Log', LogSchema);
+LogSchema.plugin(passportLocalMongoose);
+
+const Log = mongoose.model('Log', LogSchema);
+
+module.exports = Log;

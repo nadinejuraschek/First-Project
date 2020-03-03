@@ -15,7 +15,7 @@ const miscRoutes        = require('./routes/misc'),
       userRoutes        = require('./routes/user');
 
 // MONGODB
-mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 
 // EXPRESS SETUP
 app.use(express.static('public'));

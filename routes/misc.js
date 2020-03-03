@@ -1,6 +1,7 @@
-const   express     = require('express');
+const   express     = require('express'),
         router      = express.Router(),
         mongoose    = require('mongoose'),
+        axios       = require('axios'),
         User        = require('../models/user'),
         Log         = require('../models/log'),
         Question    = require('../models/modal'),
@@ -13,6 +14,7 @@ router.get('/', isLoggedIn, function(req, res){
 
 // render /home, /overview, and /discover if user is signed in, otherwise redirect to /login
 router.get('/home', isLoggedIn, function(req, res){
+
     // Question.find({}, function(err, data){
     //     if(err){
     //         console.log("Error: " + err);
@@ -21,14 +23,23 @@ router.get('/home', isLoggedIn, function(req, res){
     //         res.render('home', {title: 'Home', currentUser: req.user.username, modal: data});
     //       };
     // });
-    res.render('home', {title: 'Home', currentUser: req.user.username});
+    res.render('home', { title: 'Home', currentUser: req.user.username });
 });
 
 router.get('/overview', isLoggedIn, function(req, res){
-    res.render('overview', {title: 'Overview', currentUser: req.user.username});
+    Log.find({}, function(err, allLogs) {
+        if (err) {
+            console.log('Error: ' + err);
+        } else {
+            res.render('overview', { title: 'Overview', currentUser: req.user.username, logs: allLogs });
+        }
+    });
 });
 router.get('/discover', isLoggedIn, function(req, res){
     res.render('discover', {title: 'Discover', currentUser: req.user.username});
+});
+router.get('/newentry', isLoggedIn, function(req, res){
+    res.render('newentry', {title: 'Entry', currentUser: req.user.username});
 });
 
 // catch all route
