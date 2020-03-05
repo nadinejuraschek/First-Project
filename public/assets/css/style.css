@@ -313,6 +313,9 @@ exhilirated happy moderate sad depressed
 .ui .grid {
   height: 10rem;
 }
+#display-comments {
+  text-align: center;
+}
 #userComment {
   height: 4rem;
 }
@@ -333,6 +336,7 @@ exhilirated happy moderate sad depressed
 #continue-btn {
   height: 3.5rem;
 }
+
 /*****************************
   OVERVIEW
 *****************************/
@@ -393,17 +397,6 @@ a.item {
   color: #61AFBD;
   font-size: 0.8rem;
   margin: 1rem auto 1.5rem;
-}
-  
-/*****************************
-  GRAPH
-*****************************/
-#graph {
-  border-top: 2px solid #22242615;
-  height: 10vw;
-}
-.hide {
-  display: none;
 }
   
 /*****************************
