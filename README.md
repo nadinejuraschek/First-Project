@@ -43,6 +43,8 @@ Mental Health awareness is becoming more and more prevalent in today's culture a
 * mongoDB
 
 ### Further Development Goals
+* back button on add entry page
+* back to top button
 * display mood states of all entries in a graph
 * fix discover section:
     * styling should match

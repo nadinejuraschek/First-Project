@@ -94,7 +94,7 @@ $(document).on("click", ".answer-opt-1", function (event) {
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #1: " + ansQ1);
-    return ansQ1
+    // return parseInt(ansQ1)
 });
 // select answer #2
 $(document).on("click", ".answer-opt-2", function (event) {
@@ -102,7 +102,7 @@ $(document).on("click", ".answer-opt-2", function (event) {
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #2: " + ansQ2);
-    return ansQ2
+    // return parseInt(ansQ2)
 });
 // select answer #3
 $(document).on("click", ".answer-opt-3", function (event) {
@@ -110,7 +110,7 @@ $(document).on("click", ".answer-opt-3", function (event) {
     $(this).addClass("answer-selected");
     // TEST
     console.log("selected answer #3: " + ansQ3);
-    return ansQ3
+    // return parseInt(ansQ3)
 });
 // // add comments
 // $(document).on("click", "#add-comment", function (event) {
@@ -138,24 +138,25 @@ $("#continue-btn").on("click", function (event) {
 
     // create entry in db
     let newLog = {
-      mood: mood,
-      questionA: ansQ1,
-      questionB: ansQ2,
-      questionC: ansQ3,
+      date: "2020-03-05",
+      mood: 1,
+      questionA: 2,
+      questionB: 1,
+      questionC: 1,
       comment: comment
     };
     console.log(newLog);
       
     $.ajax({
-      url: "/api/entries",
+      url: "/overview",
       method: "POST",
       data: newLog
     }).then(function () {
       res.redirect('/overview');
     });
-  });
+  // });
 
-  //   Log.create(newLog, function(err, addLog) {
+  // Log.create(newLog, function(err, addLog) {
   //     if(err) {
   //       console.log('Error: ' + err);
   //     } else {
@@ -164,5 +165,5 @@ $("#continue-btn").on("click", function (event) {
   //     };
   //   });
   //   return newLog;
-//  });
+  });
 });

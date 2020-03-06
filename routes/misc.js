@@ -36,10 +36,26 @@ router.get('/overview', isLoggedIn, function(req, res){
     });
 });
 router.get('/discover', isLoggedIn, function(req, res){
-    res.render('discover', {title: 'Discover', currentUser: req.user.username});
+    res.render('discover', { title: 'Discover', currentUser: req.user.username });
 });
 router.get('/newentry', isLoggedIn, function(req, res){
-    res.render('newentry', {title: 'Entry', currentUser: req.user.username});
+    res.render('newentry', { title: 'Entry', currentUser: req.user.username });
+});
+
+router.post('/overview', isLoggedIn, function(req, res) {
+    // create new entry and save to DB
+    // TEST
+    // console.log(req.user);
+    Log.create(req.body).then(function (insertedLog) {
+       console.log(insertedLog);
+       User.findByIdAndUpdate({ _id: req.user._id }, { $push: { entries: insertedLog._id } }, function (error, success) {
+            if (error) {
+                console.log('Error: ' + error);
+            } else {
+                console.log('Success: ' + success);
+            }
+        });
+    });
 });
 
 // catch all route

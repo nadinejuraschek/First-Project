@@ -38,7 +38,7 @@ exhilirated happy moderate sad depressed
   color: #161e18;
 }
 .ui.secondary.pointing.menu .item.app-name {
-  padding-left: 0;
+  padding-left: 0.5rem;
 }
 .ui.secondary.pointing.menu a.item:hover {
   color: #61afbd;
