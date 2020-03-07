@@ -6,7 +6,16 @@ const   express     = require('express'),
         Log         = require('../models/log'),
         Question    = require('../models/modal'),
         Quotes      = require('../models/quotes');
+        
 
+        
+// check if user is logged in logic
+function isLoggedIn(req, res, next){
+    if (req.isAuthenticated()){
+        return next();
+    }
+    res.redirect('/login');
+};
 // redirect user to /login or /home when visiting /
 router.get('/', isLoggedIn, function(req, res){
     res.redirect('/home');
@@ -26,20 +35,15 @@ router.get('/home', isLoggedIn, function(req, res){
     res.render('home', { title: 'Home', currentUser: req.user.username });
 });
 
-router.get('/overview', isLoggedIn, function(req, res){
-    Log.find({}, function(err, allLogs) {
-        if (err) {
-            console.log('Error: ' + err);
-        } else {
-            res.render('overview', { title: 'Overview', currentUser: req.user.username, logs: allLogs });
-        }
+router.get('/overview', isLoggedIn,  function(req, res){
+    // TEST
+    // console.log(req.user.id);
+    User.findById(req.user.id).populate('entries').then(function(data){
+        // TEST
+        // console.log(data.entries);
+        const entries = data.entries;
+        res.render('overview', { title: 'Overview', currentUser: req.user.username, entries: entries });
     });
-});
-router.get('/discover', isLoggedIn, function(req, res){
-    res.render('discover', { title: 'Discover', currentUser: req.user.username });
-});
-router.get('/newentry', isLoggedIn, function(req, res){
-    res.render('newentry', { title: 'Entry', currentUser: req.user.username });
 });
 
 router.post('/overview', isLoggedIn, function(req, res) {
@@ -53,9 +57,18 @@ router.post('/overview', isLoggedIn, function(req, res) {
                 console.log('Error: ' + error);
             } else {
                 console.log('Success: ' + success);
-            }
+            };
+            res.redirect('/overview');
         });
     });
+});
+
+router.get('/discover', isLoggedIn, function(req, res){
+    res.render('discover', { title: 'Discover', currentUser: req.user.username });
+});
+
+router.get('/newentry', isLoggedIn, function(req, res){
+    res.render('newentry', { title: 'Entry', currentUser: req.user.username });
 });
 
 // catch all route
@@ -63,13 +76,7 @@ router.get('*', function(req, res){
     res.render('error');
 });
 
-// check if user is logged in logic
-function isLoggedIn(req, res, next){
-    if (req.isAuthenticated()){
-        return next();
-    }
-    res.redirect('/login');
-};
+
 
 // get modal data from DB
 function getModalData(){

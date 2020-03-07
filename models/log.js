@@ -2,10 +2,10 @@ const   mongoose                = require('mongoose');
 
 const LogSchema = new mongoose.Schema({
     date: Date,
-    mood: String,
-    questionA: String,
-    questionB: String,
-    questionC: String,
+    mood: Number,
+    questionA: Number,
+    questionB: Number,
+    questionC: Number,
     comment: String
 });
 

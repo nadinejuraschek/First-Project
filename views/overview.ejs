@@ -2,8 +2,6 @@
 
 <%- include('partials/navbar') -%>
 
-<%- include('partials/add-entry') -%>
-
 <main class="site-content overview">
     <div class="table-div">
       <table id="tracker-table" class="ui very basic selectable celled table">
@@ -15,7 +13,22 @@
             <td>Comments</td>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          <% for (let i = 0; i < entries.length; i++) { %>
+            <tr>
+                <td>
+                  <%= entries[i].date %>
+                </td>
+                <td><%= entries[i].mood %></td>
+                <td>
+                  <p><%= entries[i].questionA %></p>
+                  <p><%= entries[i].questionB %></p>
+                  <p><%= entries[i].questionC %></p>
+                </td>
+                <td><%= entries[i].comment %></td>
+            </tr>
+          <% } %>
+        </tbody>
       </table>
     </div>
   </main>
