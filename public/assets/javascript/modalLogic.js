@@ -28,10 +28,14 @@ const currentDateDisplay = moment().format("MMMM Do, YYYY");
 const currentDate = moment().format('MM/DD/YYYY');
 console.log("Today is: " + currentDateDisplay);
 let mood = "";
+let moodVal = "";
 let color = "";
 let ansQ1 = "";
+let Q1Val = "";
 let ansQ2 = "";
+let Q2Val = "";
 let ansQ3 = "";
+let Q3Val = "";
 let comment = "";
 $("#display-date").text(currentDateDisplay);
 
@@ -100,8 +104,10 @@ $("#continue-btn").on("click", function (event) {
       url: "/overview",
       method: "POST",
       data: newLog
-    }).then(function (err) {
-      // console.log('Error: ' + err);
+    }).then(function () {
+      window.location.href = ('/overview');
+    }).catch(function(err) {
+      throw (err);
     });
   });
 });

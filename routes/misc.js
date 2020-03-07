@@ -59,7 +59,6 @@ router.post('/overview', isLoggedIn, function(req, res) {
             } else {
                 // TEST
                 // console.log('Success: ' + success);
-                // res.redirect('/overview');
             };
         });
     });
