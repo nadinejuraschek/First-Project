@@ -1,7 +1,7 @@
 const   mongoose                = require('mongoose');
 
 const LogSchema = new mongoose.Schema({
-    date: Date,
+    date: String,
     mood: Number,
     questionA: Number,
     questionB: Number,

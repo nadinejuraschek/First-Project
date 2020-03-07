@@ -51,14 +51,16 @@ router.post('/overview', isLoggedIn, function(req, res) {
     // TEST
     // console.log(req.user);
     Log.create(req.body).then(function (insertedLog) {
-       console.log(insertedLog);
-       User.findByIdAndUpdate({ _id: req.user._id }, { $push: { entries: insertedLog._id } }, function (error, success) {
+        // TEST
+        // console.log(insertedLog);
+        User.findByIdAndUpdate({ _id: req.user._id }, { $push: { entries: insertedLog._id } }, function (error, success) {
             if (error) {
                 console.log('Error: ' + error);
             } else {
-                console.log('Success: ' + success);
+                // TEST
+                // console.log('Success: ' + success);
+                // res.redirect('/overview');
             };
-            res.redirect('/overview');
         });
     });
 });

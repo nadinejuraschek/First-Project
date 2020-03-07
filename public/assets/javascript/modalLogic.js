@@ -101,7 +101,7 @@ $("#continue-btn").on("click", function (event) {
       method: "POST",
       data: newLog
     }).then(function (err) {
-      console.log('Error: ' + err);
+      // console.log('Error: ' + err);
     });
   });
 });
