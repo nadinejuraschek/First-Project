@@ -17,7 +17,7 @@ const miscRoutes        = require('./routes/misc'),
       userRoutes        = require('./routes/user');
 
 // MONGODB
-mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
 
 // EXPRESS SETUP
 app.use(express.static('public'));
@@ -50,11 +50,6 @@ passport.deserializeUser(User.deserializeUser());
 app.use(userRoutes);
 app.use(miscRoutes);
 app.use(newentryRoutes);
-
-// Heroku Setup
-if (process.env.NODE_ENV === 'production') {
-
-};
 
 // server logic
 app.listen(process.env.PORT, function(){
