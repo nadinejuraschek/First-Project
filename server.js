@@ -51,6 +51,11 @@ app.use(userRoutes);
 app.use(miscRoutes);
 app.use(newentryRoutes);
 
+// Heroku Setup
+if (process.env.NODE_ENV === 'production') {
+
+};
+
 // server logic
 app.listen(process.env.PORT, function(){
     console.log('Server is listening on PORT ' + process.env.PORT + '.');
