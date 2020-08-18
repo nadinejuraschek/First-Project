@@ -53,7 +53,7 @@ router.get('/overview', isLoggedIn, function(req, res) {
 //     });
 // });
 
-// EDIT 
+// EDIT
 // router.get('/entries/:id/edit', isLoggedIn, function(req, res){
 //   Log.findById(req.params.id, function(err, foundLog){
 //     if (err) {

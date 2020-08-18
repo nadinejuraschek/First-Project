@@ -45,6 +45,29 @@ $(document).ready(function () {
         }
     });
 
+    $(document).on('click', '#test-btn', function(event) {
+        event.preventDefault();
+
+        // set values to test user account values
+        let testUser = {
+            username: 'tester',
+            password: 'abc123'
+        };
+        console.log(testUser);
+
+        // make POST request to database
+        $.ajax({
+            url: "/login",
+            method: "POST",
+            data: testUser
+        }).then(function () {
+            // redirect to /home
+            window.location.href = ('/home');
+        }).catch(function(err) {
+            throw (err);
+        });
+    })
+
     /****************************
     DAILY SUMMARY MODAL
     ****************************/

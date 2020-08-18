@@ -17,7 +17,12 @@ const miscRoutes        = require('./routes/misc'),
       userRoutes        = require('./routes/user');
 
 // MONGODB
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGO_URI,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+});
 
 // EXPRESS SETUP
 app.use(express.static('public'));
@@ -29,14 +34,11 @@ app.use(express.json());
 // EJS SETUP
 app.set('view engine', 'ejs');
 
-// SCHEMA SETUP
-
-
 // PASSPORT CONFIG
 app.use(require('express-session')({
     secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: false 
+    saveUninitialized: false,
 }));
 app.use(passport.initialize());
 app.use(passport.session());

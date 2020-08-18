@@ -28,10 +28,9 @@ router.post('/signup', function(req, res){
 router.get('/login', function(req, res){
     res.render('log-in', {title: 'LogIn'});
 });
-router.post('/login', passport.authenticate('local', 
-    { 
-        successRedirect: '/home',
-        failureRedirect: '/login'
+router.post('/login', passport.authenticate('local', {
+    successRedirect: '/home',
+    failureRedirect: '/login'
 }));
 
 // logout logic

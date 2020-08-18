@@ -19,7 +19,7 @@ exhilirated happy moderate sad depressed
   align-items: center;
   justify-content: center;
 }
-  
+
 /*******************************
   NAVIGATION
 *******************************/
@@ -222,7 +222,7 @@ exhilirated happy moderate sad depressed
   text-decoration: none;
   cursor: pointer;
 }
-  
+
 /* ADD ENTRY */
 #add-entry-modal {
   display: none; /* Hidden by default */
@@ -349,7 +349,19 @@ exhilirated happy moderate sad depressed
   .comment {
   line-height: 2rem;
 }
-  
+.graph {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.5rem;
+}
+.graph-day {
+  background-color: #dddddd;
+  list-style: none;
+  height: 10px;
+  width: 10px;
+}
+
 /*****************************
   MAIN SECTION
 *****************************/
@@ -376,7 +388,7 @@ hr {
   margin: auto;
   width: 90vw;
 }
-  
+
 /*****************************
   FOOTER
 *****************************/
@@ -398,7 +410,7 @@ a.item {
   font-size: 0.8rem;
   margin: 1rem auto 1.5rem;
 }
-  
+
 /*****************************
   DISCOVER
 *****************************/

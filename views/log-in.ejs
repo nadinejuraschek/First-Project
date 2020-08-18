@@ -1,41 +1,37 @@
 <%- include('partials/header') -%>
 
-  <div class="site">
   <!-- LOG IN / SIGN UP FORM -->
-  <div class="site-content content">
+  <div class="auth-form">
     <div class="login-logo-div">
-      <img class="login-logo" src="assets/images/moodsphere.svg" alt="Moodsphere Logo">
+      <img class="login-logo" src="assets/images/moodsphere.svg" alt="Moodsphere Logo" />
       <h1 class="login-heading">Moodsphere</h1>
     </div>
     <form method="POST" action="/login" class="ui large form">
       <div class="ui stacked segment">
         <div class="field">
-          <!-- <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input type="text" name="email" id="email-input" placeholder="E-Mail Address"
-                />
-          </div> -->
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="username" id="username-input" placeholder="Username"
-                />
+            <input type="text" name="username" id="username-input" placeholder="Username" />
           </div>
         </div>
       <div class="field">
         <div class="ui left icon input">
           <i class="lock icon"></i>
-          <input type="password" name="password" id="password-input" placeholder="Password"
-                />
+          <input type="password" name="password" id="password-input" placeholder="Password" />
         </div>
       </div>
       <button class="ui fluid large submit button" id="login-btn">Log In</button>
     </form>
     <div class="message">
-      Don't have an account, yet?
-      <a href="/signup" id="signup-btn" class="ui small submit button">Sign Up</a>
+      <div class="message-item">
+        Don't have an account, yet?
+        <a href="/signup" id="signup-btn" class="message-link">Sign Up</a>
+      </div>
+      <div class="message-item">
+        Testing?
+        <span id="test-btn" class="message-link">Use Guest Account</span>
+      </div>
     </div>
   </div>
-
-</div>
 
 <%- include('partials/footer') -%>

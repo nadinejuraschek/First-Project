@@ -1,11 +1,12 @@
-const   mongoose                = require('mongoose');
+const   mongoose = require('mongoose');
 
 const LogSchema = new mongoose.Schema({
     date: String,
-    mood: Number,
-    questionA: Number,
-    questionB: Number,
-    questionC: Number,
+    mood: String,
+    color: String,
+    questionA: String,
+    questionB: String,
+    questionC: String,
     comment: String
 });
 

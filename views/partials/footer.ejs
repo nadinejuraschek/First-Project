@@ -7,7 +7,7 @@
         <a class="item" href="https://github.com/Caitlin3410">Caitlin Phillips</a><span class="divider-line"> | </span>
         <a class="item" href="https://github.com/LoraleeSmith">Loralee Smith</a>
     </div>
-    <div class="ui center aligned container copyright">® 2019</div>
+    <div class="ui center aligned container copyright">® <span id="year"></span></div>
 </div>
 
 <!-- JAVASCRIPT, JQUERY -->
@@ -17,6 +17,10 @@
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script type="text/javascript" src="/assets/javascript/app.js"></script>
 <script type="text/javascript" src="/assets/javascript/modalLogic.js"></script>
+<script type="text/javascript" src="/assets/javascript/overview.js"></script>
+<script>
+    $('#year').html(new Date().getFullYear());
+</script>
 
 </body>
 </html>

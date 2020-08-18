@@ -46,7 +46,7 @@ $(document).on("click", ".mood", function (event) {
     color = $(this).attr("data-color");
     $(this).addClass("button-clicked");
     // TEST
-    console.log("selected mood: " + mood + ", " + color);
+    console.log(`selected mood: ${mood}, ${color}.`);
   });
 // select answer #1
 $(document).on("click", ".answer-opt-1", function (event) {
@@ -54,7 +54,7 @@ $(document).on("click", ".answer-opt-1", function (event) {
     Q1Val = $(this).attr("value");
     $(this).addClass("answer-selected");
     // TEST
-    console.log("selected answer #1: " + ansQ1);
+    console.log(`selected answer #1: ${ansQ1}`);
 });
 // select answer #2
 $(document).on("click", ".answer-opt-2", function (event) {
@@ -62,7 +62,7 @@ $(document).on("click", ".answer-opt-2", function (event) {
     Q2Val = $(this).attr("value");
     $(this).addClass("answer-selected");
     // TEST
-    console.log("selected answer #2: " + ansQ2);
+    console.log(`selected answer #2: ${ansQ2}`);
 });
 // select answer #3
 $(document).on("click", ".answer-opt-3", function (event) {
@@ -70,7 +70,7 @@ $(document).on("click", ".answer-opt-3", function (event) {
     Q3Val = $(this).attr("value");
     $(this).addClass("answer-selected");
     // TEST
-    console.log("selected answer #3: " + ansQ3);
+    console.log(`selected answer #3: ${ansQ3}`);
 });
 
 // send form off and redirect user
@@ -92,14 +92,15 @@ $("#continue-btn").on("click", function (event) {
     // create entry in db
     let newLog = {
       date: currentDate,
-      mood: moodVal,
+      mood: mood,
+      color: moodVal,
       questionA: Q1Val,
       questionB: Q2Val,
       questionC: Q3Val,
       comment: comment
     };
     console.log(newLog);
-      
+
     $.ajax({
       url: "/overview",
       method: "POST",
