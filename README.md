@@ -3,6 +3,10 @@
 ### UC Davis Coding Boot Camp - Project 1
 #### https://moodsphere.herokuapp.com/
 
+#### Test Login
+* Username: Piper
+* Password: testing123
+
 ### Team of Developers
 * [Nadine Juraschek](https://github.com/nadinejuraschek)
 * [Morgan McMilin](https://github.com/Morganatic)
