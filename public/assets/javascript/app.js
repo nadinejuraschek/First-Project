@@ -1,5 +1,12 @@
 $(document).ready(function () {
     /******************************
+    NAVIGATION
+    ******************************/
+    $(document).on("click", "#menu-btn", function() {
+        $("#menu-dropdown").toggle("fade-in");
+    });
+
+    /******************************
     FORM VALIDATION
     ******************************/
     // Password

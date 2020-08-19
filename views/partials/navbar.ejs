@@ -1,25 +1,45 @@
 <!-- NAVIGATION -->
-<div class="ui big sticky secondary pointing menu">
-    <div class="header item">
-      <img
-        class="app-logo"
-        src="assets/images/moodsphere.svg"
-        alt="Moodsphere Logo"
-      />
-      <span class="ui header item app-name">Moodsphere</span>
-    </div>
-    <div class="right menu">
-      <a class="item" href="/home">
-        Home
-      </a>
-      <a class="item" href="/overview">
-        Overview
-      </a>
-      <a class="item" href="/discover">
-        Discover
-      </a>
-      <a class="ui item" id="logout-btn" href="/logout">
-        Logout
-      </a>
-    </div>
+<nav>
+  <a class="brand">
+    <img
+      class="logo"
+      src="assets/images/moodsphere.svg"
+      alt="Moodsphere Logo"
+    />
+    <span class="brand-name">Moodsphere</span>
+  </a>
+  <div id="menu-btn">
+    <i class="bars icon"></i>
+  </div>
+  <div class="menu">
+    <a class="nav-item" href="/home">
+      Home
+    </a>
+    <a class="nav-item" href="/overview">
+      Overview
+    </a>
+    <a class="nav-item" href="/discover">
+      Discover
+    </a>
+    <a class="nav-item" id="logout-btn" href="/logout">
+      Logout
+    </a>
+  </div>
+</nav>
+
+<div id="menu-dropdown" class="fade-in">
+  <div class="menu-dropdown-items">
+    <a class="nav-item" href="/home">
+      Home
+    </a>
+    <a class="nav-item" href="/overview">
+      Overview
+    </a>
+    <a class="nav-item" href="/discover">
+      Discover
+    </a>
+    <a class="nav-item" id="logout-btn" href="/logout">
+      Logout
+    </a>
+  </div>
 </div>

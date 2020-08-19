@@ -4,8 +4,8 @@
 #### https://moodsphere.herokuapp.com/
 
 #### Test Login
-* Username: Piper
-* Password: testing123
+* Username: tester
+* Password: abc123
 
 ### Team of Developers
 * [Nadine Juraschek](https://github.com/nadinejuraschek)

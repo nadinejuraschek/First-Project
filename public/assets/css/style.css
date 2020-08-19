@@ -12,63 +12,125 @@ exhilirated happy moderate sad depressed
   min-height: 100vh;
   flex-direction: column;
   color: #161e18;
+  padding: 0 24px;
 }
 .site-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  min-height: calc(100vh - 152px);
 }
 
 /*******************************
   NAVIGATION
 *******************************/
-.app-logo {
+nav {
+  border-bottom: 2px solid rgba(34, 36, 38, 0.15);
+  color: #161e18;
+  font-size: 1.25rem;
+  height: 60px;
+  padding: 0 24px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
   height: 2.25rem;
-  margin: 0.25rem 1rem;
   width: 2.25rem;
 }
-.ui.header.item {
-  font-family: "Fira Sans", sans-serif;
+
+.brand {
+  display: flex;
+  align-items: center;
 }
-.ui.secondary.pointing.menu {
-  margin-bottom: 0;
+
+.brand-name {
+  color: #61afbd;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.6rem;
+  margin-left: 0.5rem;
 }
-.ui.secondary.pointing.menu .item {
+
+.nav-item {
   color: #161e18;
 }
-.ui.secondary.pointing.menu .item.app-name {
-  padding-left: 0.5rem;
+
+.nav-item:not(:last-child) {
+  margin-right: 1rem;
 }
-.ui.secondary.pointing.menu a.item:hover {
+
+.nav-item:hover,
+.brand-name:hover {
   color: #61afbd;
+  cursor: pointer;
   font-weight: 700;
 }
-.ui.secondary.pointing.menu .active.item {
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border-bottom: 5px solid #61afbd;
-  font-weight: 700;
+
+.nav-item:active {
+  color: #161e18;
+}
+
+.menu {
+  display: none;
+}
+
+#menu-btn {
   color: #61afbd;
+  font-size: 1.5rem;
 }
-.ui.secondary.pointing.menu a.active.item:hover {
-  color: #61afbd;
-  font-weight: 700;
-  border-color: #61afbd;
+
+#menu-btn:hover {
+  cursor: pointer;
 }
-#logout-btn:hover {
-  background-color: #61afbd;
-  color: #ffffff;
-  font-weight: 700;
+
+#menu-dropdown {
+  background-color: #ffffff;
+  border-bottom: 2px solid rgba(34, 36, 38, 0.15);
+  border-left: 2px solid rgba(34, 36, 38, 0.15);
+  width: 30%;
+
+  display: none;
+
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 1rem 24px;
+  z-index: 5;
 }
-  
+
+.menu-dropdown-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-dropdown-items .nav-item {
+  padding: 0.5rem 0;
+}
+
+@media only screen and (min-width: 900px) {
+  #menu-btn {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
 /*******************************
   WELCOME / HOMEPAGE
 *******************************/
 /* JUMBOTRON */
 .ui.masthead.segment {
-  background-image: linear-gradient(#353e6399, #353e6399), url(/assets/images/zen-dandelion.jpg);
+  background-image: linear-gradient(#353e6399, #353e6399),
+    url(/assets/images/zen-dandelion.jpg);
   background-size: cover;
   background-position: center bottom;
   border: none;
@@ -85,7 +147,7 @@ exhilirated happy moderate sad depressed
 }
 .ui.header.welcome {
   color: #ffffff;
-  font-family: "Fira Sans", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   font-size: 4rem;
   margin-bottom: 4rem;
   margin-top: 4rem;
@@ -186,7 +248,7 @@ exhilirated happy moderate sad depressed
   font-size: 1.25rem;
   font-weight: 700;
 }
-  
+
 /*****************************
   MODAL
 *****************************/
@@ -217,7 +279,7 @@ exhilirated happy moderate sad depressed
   font-weight: bold;
 }
 .close:hover,
-  .close:focus {
+.close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -267,7 +329,7 @@ exhilirated happy moderate sad depressed
   background-color: #f9b38d;
 }
 #sad {
-  background-color: #76B3BE;
+  background-color: #76b3be;
 }
 #depressed {
   background-color: #2d484d;
@@ -278,8 +340,8 @@ exhilirated happy moderate sad depressed
   margin: 4rem 0 2rem 0;
 }
 .answer-opt-1,
-  .answer-opt-2,
-  .answer-opt-3 {
+.answer-opt-2,
+.answer-opt-3 {
   border: 3px solid #f9b38d;
   border-radius: 10px;
   color: #000;
@@ -291,10 +353,10 @@ exhilirated happy moderate sad depressed
   width: 75%;
 }
 .answer-opt-1:hover,
-  .answer-opt-2:hover,
-  .answer-opt-3:hover,
-  .answer-selected {
-    background-color: #f9b38d;
+.answer-opt-2:hover,
+.answer-opt-3:hover,
+.answer-selected {
+  background-color: #f9b38d;
 }
 .modal-btn {
   background-color: #61afbd;
@@ -322,7 +384,7 @@ exhilirated happy moderate sad depressed
 .btn-col {
   text-align: left;
 }
-#add-comment { 
+#add-comment {
   color: #61afbd;
   font-size: 2rem;
   margin: auto;
@@ -345,21 +407,38 @@ exhilirated happy moderate sad depressed
   font-size: 1.25rem;
   font-weight: 700;
 }
+
 .answers,
-  .comment {
+.comment {
   line-height: 2rem;
 }
+
+.graph-container {
+  margin: 4rem auto;
+}
+
+.graph-year {
+}
+
 .graph {
   display: grid;
-  grid-template-columns: repeat(52, 1fr);
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(26, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+  grid-gap: 2px;
 }
+
 .graph-day {
   background-color: #dddddd;
   list-style: none;
   height: 10px;
   width: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+  .graph {
+    grid-template-columns: repeat(52, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
 }
 
 /*****************************
@@ -398,15 +477,15 @@ hr {
   width: 100%;
 }
 a.item {
-  color: #61AFBD;
+  color: #61afbd;
 }
 .divider-line {
-  color: #61AFBD;
+  color: #61afbd;
   font-weight: 800;
   margin: 0 1.5rem;
 }
 .copyright {
-  color: #61AFBD;
+  color: #61afbd;
   font-size: 0.8rem;
   margin: 1rem auto 1.5rem;
 }
@@ -424,13 +503,13 @@ a.item {
   width: 100%;
 }
 .ui.card.listen {
-  background-image: url("../pattern/pattern1-yellow.jpg");
+  background-image: url('../pattern/pattern1-yellow.jpg');
 }
 .ui.card.watch {
-  background-image: url("../pattern/pattern1-green.jpg");
+  background-image: url('../pattern/pattern1-green.jpg');
 }
 .ui.card.read {
-  background-image: url("../pattern/pattern1-blue.jpg");
+  background-image: url('../pattern/pattern1-blue.jpg');
 }
 .discover-section {
   font-size: 1.5rem;
