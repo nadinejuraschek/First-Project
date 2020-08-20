@@ -2,256 +2,164 @@
 
 <%- include('partials/navbar') -%>
 
-<main class="site-content">
+<main class="site-content discover-container">
+  <section class="discover-section">
     <!-- WATCH: VIDEOS -->
-    <h3 class="discover-section"><i class="film icon"></i> Watch</h3>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <a href="https://www.youtube.com/embed/WWloIAQpMcQ">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">How to Cope with Anxiety</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    TED Talk by Olivia Remes
-                  </p>
-                </div>
-              </div>
-            </div>
-        </div>
-        </a>
-        <div class="swiper-slide">
-          <a href="https://youtu.be/85QY_d-8J2M">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Anxiety: A Cancer of the Mind</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    TED Talk by Aneysha Bhat
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://youtu.be/JUedQ0_EGCQ">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Living with High Functioning Anxiety</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    TED Talk by Jordan Raskopoulos
-                  </p>
-                </div>
-              </div>
-            </div>
-        </div>
-        </a>
-        <div class="swiper-slide">
-          <a href="https://www.youtube.com/watch?v=khkJkR-ipfw">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Moving Forward With Grief</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Ted Talk by Nora McInerny
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://www.youtube.com/watch?v=ORs3-tRokGU">
-            <div class="ui card listen">
-              <div class="content">
-                <div class="center aligned header card-heading">Treating PTSD</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Ted Talk by Peter Tuerk | TEDxCharleston
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <h2 class="discover-section-heading"><i class="film icon"></i> Watch</h2>
+
+    <div class="discover-cards watch">
+      <a class="discover-card show" id="watch-01" href="https://www.youtube.com/embed/WWloIAQpMcQ">
+        <h3 class="discover-heading">How to Cope with Anxiety</h3>
+        <hr />
+        <p class="discover-text">TED Talk by Olivia Remes</p>
+      </a>
+
+      <a class="discover-card" id="watch-02" href="https://youtu.be/85QY_d-8J2M">
+        <h3 class="discover-heading">Anxiety: A Cancer of the Mind</h3>
+        <hr />
+        <p class="discover-text">TED Talk by Aneysha Bhat</p>
+      </a>
+
+      <a class="discover-card" id="watch-03" href="https://youtu.be/JUedQ0_EGCQ">
+        <h3 class="discover-heading">Living with High Functioning Anxiety</h3>
+        <hr />
+        <p class="discover-text">TED Talk by Jordan Raskopoulos</p>
+      </a>
+
+      <a class="discover-card" id="watch-04" href="https://www.youtube.com/watch?v=khkJkR-ipfw">
+        <h3 class="discover-heading">Moving Forward With Grief</h3>
+        <hr />
+        <p class="discover-text">TED Talk by Nora McInerny</p>
+      </a>
+
+      <a class="discover-card" id="watch-05" href="https://www.youtube.com/watch?v=ORs3-tRokGU">
+        <h3 class="discover-heading">Treating PTSD</h3>
+        <hr />
+        <p class="discover-text">Ted Talk by Peter Tuerk</p>
+      </a>
     </div>
 
+    <div class="discover-dots">
+      <div class="dot" id="watch-dot-01"></div>
+      <div class="dot" id="watch-dot-02"></div>
+      <div class="dot" id="watch-dot-03"></div>
+      <div class="dot" id="watch-dot-04"></div>
+      <div class="dot" id="watch-dot-05"></div>
+    </div>
+
+  </section>
+
+  <section class="discover-section">
     <!-- LISTEN: MUSIC -->
-    <h3 class="discover-section"><i class="headphones icon"></i> Listen</h3>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <a href="https://open.spotify.com/playlist/2EXP6pCDBdF4yRj2LZ6xFr">
-            <div class="ui card watch">
-              <div class="content">
-                <div class="center aligned header card-heading">Calming Music Playlist</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    A Spotify Playlist full of calming music by Calming Music Academy.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://open.spotify.com/show/79GbkgP2sxA8FJ97Qk1GKZ">
-            <div class="ui card watch">
-              <div class="content">
-                <div class="center aligned header card-heading">Health Anxiety Podcast Show</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Let Dennis Simsek guide you through the diagnosis, symptoms, and coping strategies for anxiety.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://open.spotify.com/show/6XPm7Mr08nFVWX4Abcqmek">
-            <div class="ui card watch">
-              <div class="content">
-                <div class="center aligned header card-heading">Relaxing Tunes</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    A Spotify Playlist full of relaxing tunes.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://open.spotify.com/show/6925GqlCoRoCEo8UYy17FQ">
-            <div class="ui card watch">
-              <div class="content">
-                <div class="center aligned header card-heading">Love Your Anxiety</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Listen to Emilie Clarke's personal anxiety story and get ideas on how to cope with yours.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://www.youtube.com/watch?v=YFSc7Ck0Ao0">
-            <div class="ui card watch">
-              <div class="content">
-                <div class="center aligned header card-heading">Breathing Meditation</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    5-minute breathing meditation exercise guided by Diana Winston, UCLA Mindful Awareness Research
-                    Center.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <h2 class="discover-section-heading"><i class="headphones icon"></i> Listen</h2>
+
+    <div class="discover-cards listen">
+      <a class="discover-card show" id="listen-01" href="https://open.spotify.com/playlist/2EXP6pCDBdF4yRj2LZ6xFr">
+        <h3 class="discover-heading">Calming Music Playlist</h3>
+        <hr />
+        <p class="discover-text">
+          A Spotify Playlist full of calming music by Calming Music Academy.
+        </p>
+      </a>
+
+      <a class="discover-card listen" id="listen-02" href="https://open.spotify.com/show/79GbkgP2sxA8FJ97Qk1GKZ">
+        <h3 class="discover-heading">Health Anxiety Podcast Show</h3>
+        <hr />
+        <p class="discover-text">
+          Let Dennis Simsek guide you through the diagnosis, symptoms, and coping strategies for anxiety.
+        </p>
+      </a>
+
+      <a class="discover-card" id="listen-03" href="https://open.spotify.com/show/6XPm7Mr08nFVWX4Abcqmek">
+        <h3 class="discover-heading">Relaxing Tunes</h3>
+        <hr />
+        <p class="discover-text">
+          A Spotify Playlist full of relaxing tunes.
+        </p>
+      </a>
+
+      <a class="discover-card" id="listen-04" href="https://open.spotify.com/show/6925GqlCoRoCEo8UYy17FQ">
+        <h3 class="discover-heading">Love Your Anxiety</h3>
+        <hr />
+        <p class="discover-text">
+          Listen to Emilie Clarke's personal anxiety story and get ideas on how to cope with yours.
+        </p>
+      </a>
+
+      <a class="discover-card" id="listen-05" href="https://www.youtube.com/watch?v=YFSc7Ck0Ao0">
+        <h3 class="discover-heading">Breathing Meditation</h3>
+        <hr />
+        <p class="discover-text">
+          5-minute breathing meditation exercise guided by Diana Winston, UCLA Mindful Awareness Research Center.
+        </p>
+      </a>
     </div>
 
-    <!-- READ: ARTICLES -->
-    <h3 class="discover-section"><i class="book icon"></i> Read</h3>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <a href="https://www.helpguide.org/articles/depression/coping-with-depression.htm">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">A Helpful Guide to Depression</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Helpful guide to coping with depression.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://adaa.org/tips">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Tips For Anxiety</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Tips on coping with anxiety.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://www.helpguide.org/articles/mental-health/building-better-mental-health.htm">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Building Better Mental Health</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    An article about building better mental health for yourself. What to look for.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://www.samhsa.gov/find-help/national-helpline">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">National Helpline</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Substance Abuse and Mental Health Services and Administration national helpline sources.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="https://www.apa.org/helpcenter/grief">
-            <div class="ui card read">
-              <div class="content">
-                <div class="center aligned header card-heading">Coping With Grief</div>
-                <div class="center aligned description card-body">
-                  <p>
-                    Lost a loved one? Coping with grief can be hard, we can help.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <div class="discover-dots">
+      <div class="dot" id="listen-dot-01"></div>
+      <div class="dot" id="listen-dot-02"></div>
+      <div class="dot" id="listen-dot-03"></div>
+      <div class="dot" id="listen-dot-04"></div>
+      <div class="dot" id="listen-dot-05"></div>
     </div>
+
+  </section>
+
+  <section class="discover-section">
+    <!-- READ: ARTICLES -->
+    <h2 class="discover-section-heading"><i class="book icon"></i> Read</h2>
+
+    <div class="discover-cards read">
+      <a class="discover-card show" id="read-01" href="https://www.helpguide.org/articles/depression/coping-with-depression.html">
+        <h3 class="discover-heading">A Helpful Guide to Depression</h3>
+        <hr />
+        <p class="discover-text">
+          Helpful guide to coping with depression.
+        </p>
+      </a>
+
+      <a class="discover-card" id="read-02" href="https://adaa.org/tips">
+        <h3 class="discover-heading">Tips For Anxiety</h3>
+        <hr />
+        <p class="discover-text">
+          Tips on coping with anxiety.
+        </p>
+      </a>
+
+      <a class="discover-card" id="read-03" href="https://www.helpguide.org/articles/mental-health/building-better-mental-health.html">
+        <h3 class="discover-heading">Building Better Mental Health</h3>
+        <hr />
+        <p class="discover-text">
+          An article about building better mental health for yourself.
+        </p>
+      </a>
+
+      <a class="discover-card" id="read-04" href="https://www.samhsa.gov/find-help/national-helpline">
+        <h3 class="discover-heading">National Helpline</h3>
+        <hr />
+        <p class="discover-text">
+          Substance Abuse and Mental Health Services and Administration national helpline sources.
+        </p>
+      </a>
+
+      <a class="discover-card" id="read-05" href="https://www.apa.org/helpcenter/grief">
+        <h3 class="discover-heading">Coping With Grief</h3>
+        <hr />
+        <p class="discover-text">
+          Lost a loved one? Coping with grief can be hard, we can help.
+        </p>
+      </a>
+    </div>
+
+    <div class="discover-dots">
+      <div class="dot" id="read-dot-01"></div>
+      <div class="dot" id="read-dot-02"></div>
+      <div class="dot" id="read-dot-03"></div>
+      <div class="dot" id="read-dot-04"></div>
+      <div class="dot" id="read-dot-05"></div>
+    </div>
+
+  </section>
 </main>
 
 <%- include('partials/footer') -%>

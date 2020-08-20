@@ -2,9 +2,18 @@
 
 <%- include('partials/navbar') -%>
 
-<main class="site-content overview">
+<main class="site-content overview-containter">
+  <div class="date-controller">
+    <div id="prev-month">
+      <i class="angle left icon"></i>
+    </div>
+    <div class="display-date"></div>
+    <div id="next-month">
+      <i class="angle right icon"></i>
+    </div>
+  </div>
     <div class="table-div">
-      <table id="tracker-table" class="ui very basic selectable celled table">
+      <table id="tracker-table" class="ui selectable celled table">
         <thead id="category">
           <tr>
             <td>Date</td>
@@ -33,7 +42,7 @@
     </div>
 
     <section class="graph-container">
-      <h3 class="graph-year" id="year"></h3>
+      <h3 class="graph-year year"></h3>
       <div class="graph"></div>
     </section>
   </main>

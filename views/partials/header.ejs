@@ -40,12 +40,14 @@
       href="https://fonts.googleapis.com/css?family=Fira+Sans:800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- CUSTOM STYLESHEET -->
     <% if (title === 'Home' || title === 'Overview' || title === 'Entry') { %>
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <% } else if (title === 'Discover') { %>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/discover.css" />
     <% } else if (title === 'LogIn' || title === 'SignUp') { %>
     <link rel="stylesheet" type="text/css" href="assets/css/log-in.css" />
