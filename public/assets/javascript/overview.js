@@ -12,22 +12,24 @@ $(document).ready(function () {
         method: "GET",
         async: false,
         dataType: "json",
-    }).done(function(data) {
-        // create mood graph
-        createGraph();
-        data.map(entry => {
-            $(`.${entry.dayId}`).css({ backgroundColor: `${entry.color}` });
-            if (moment(entry.date).format("YYYY") === year) {
-                if (moment(entry.date).format("MMM") === month) {
+        success: function (data) {
+            entries = data;
+        }
+    });
+
+    // create mood graph
+    createGraph();
+    entries.map(entry => {
+        $(`.${entry.dayId}`).css({ backgroundColor: `${entry.color}` });
+        if (moment(entry.date).format("YYYY") === year) {
+            if (moment(entry.date).format("MMM") === month) {
                     displayEntries.push(entry);
-                };
             };
-        });
-        displayEntries.map(day => {
-            console.log(day);
-            let row = `<tr><td class="tracker-table-date" style="background-color: ${day.color}">${moment(day.date).format("DD")}</td><td class="tracker-table-comments">${day.comment}</td></tr>`;
-            $(".tracker-table-body").append(row);
-        });
+        };
+    });
+    displayEntries.map(day => {
+        let row = `<tr><td class="tracker-table-date" style="background-color: ${day.color}">${moment(day.date).format("DD")}</td><td class="tracker-table-comments">${day.comment}</td></tr>`;
+        $(".tracker-table-body").append(row);
     });
 
     // change month to diplay logs
@@ -52,14 +54,18 @@ $(document).ready(function () {
     };
 
     function getDisplayEntries(day) {
+        $(".tracker-table-body").empty();
         displayEntries = [];
         entries.map(entry => {
             if (moment(entry.date).format("YYYY") === moment(day).format("YYYY")) {
                 if (moment(entry.date).format("MMM") === moment(day).format("MMM")) {
                     displayEntries.push(entry);
-                    console.log(displayEntries);
                 };
             };
+        });
+        displayEntries.map(day => {
+            let row = `<tr><td class="tracker-table-date" style="background-color: ${day.color}">${moment(day.date).format("DD")}</td><td class="tracker-table-comments">${day.comment}</td></tr>`;
+            $(".tracker-table-body").append(row);
         });
     };
 
