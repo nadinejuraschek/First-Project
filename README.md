@@ -26,14 +26,19 @@ Our web application will...
 
 ### Preview
 #### Login
+![Login Page](./public/assets/images/readme/moodsphere-login.png)
 
 #### Home
+![Home Page](./public/assets/images/readme/moodsphere-home.png)
 
 #### New Entry
+![New Entry Page](./public/assets/images/readme/moodsphere-newentry.png)
 
 #### Overview
+![Overview Page](./public/assets/images/readme/moodsphere-overview.png)
 
 #### Discover
+![Discover Page](./public/assets/images/readme/moodsphere-discover.png)
 
 ### APIs Used
 * [Open Weather](https://openweathermap.org/)

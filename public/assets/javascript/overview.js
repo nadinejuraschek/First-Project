@@ -79,6 +79,7 @@ $(document).ready(function () {
             $('.graph').append(day);
         };
 
+
         let widthOfSquare = $('.graph-day').width();
         $('.graph-day').css({'height': `${widthOfSquare}px`});
     };
