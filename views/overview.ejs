@@ -13,30 +13,14 @@
     </div>
   </div>
     <div class="table-div">
-      <table id="tracker-table" class="ui selectable celled table">
+      <table id="tracker-table">
         <thead id="category">
           <tr>
-            <td>Date</td>
-            <td>Mood</td>
-            <td>Log</td>
+            <td class="tracker-table-date">Date</td>
             <td>Comments</td>
           </tr>
         </thead>
-        <tbody>
-          <% for (let i = 0; i < entries.length; i++) { %>
-            <tr>
-                <td>
-                  <%= entries[i].date %>
-                </td>
-                <td><%= entries[i].mood %></td>
-                <td>
-                  <p><%= entries[i].questionA %></p>
-                  <p><%= entries[i].questionB %></p>
-                  <p><%= entries[i].questionC %></p>
-                </td>
-                <td><%= entries[i].comment %></td>
-            </tr>
-          <% } %>
+        <tbody class="tracker-table-body">
         </tbody>
       </table>
     </div>

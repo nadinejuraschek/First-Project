@@ -31,7 +31,7 @@ const dayId = `${moment().format("YYYY")}-${moment().dayOfYear()}`;
 // console.log(dayId);
 console.log("Today is: " + currentDateDisplay);
 let mood = "";
-let moodVal = "";
+// let moodVal = "";
 let color = "";
 let ansQ1 = "";
 let Q1Val = "";
@@ -45,8 +45,9 @@ $("#display-date").text(currentDateDisplay);
 // select a mood
 $(document).on("click", ".mood", function (event) {
     mood = $(this).attr("data-mood");
-    moodVal = $(this).attr("value");
+    // moodVal = $(this).attr("value");
     color = $(this).attr("data-color");
+    $("#mood-states").find(".button-clicked").removeClass("button-clicked");
     $(this).addClass("button-clicked");
     // TEST
     console.log(`selected mood: ${mood}, ${color}.`);
@@ -55,6 +56,7 @@ $(document).on("click", ".mood", function (event) {
 $(document).on("click", ".answer-opt-1", function (event) {
     ansQ1 = $(this).attr("data-text");
     Q1Val = $(this).attr("value");
+    $(".questionA-container").find(".answer-selected").removeClass("answer-selected");
     $(this).addClass("answer-selected");
     // TEST
     console.log(`selected answer #1: ${ansQ1}`);
@@ -63,6 +65,7 @@ $(document).on("click", ".answer-opt-1", function (event) {
 $(document).on("click", ".answer-opt-2", function (event) {
     ansQ2 = $(this).attr("data-text");
     Q2Val = $(this).attr("value");
+    $(".questionB-container").find(".answer-selected").removeClass("answer-selected");
     $(this).addClass("answer-selected");
     // TEST
     console.log(`selected answer #2: ${ansQ2}`);
@@ -71,6 +74,7 @@ $(document).on("click", ".answer-opt-2", function (event) {
 $(document).on("click", ".answer-opt-3", function (event) {
     ansQ3 = $(this).attr("data-text");
     Q3Val = $(this).attr("value");
+    $(".questionC-container").find(".answer-selected").removeClass("answer-selected");
     $(this).addClass("answer-selected");
     // TEST
     console.log(`selected answer #3: ${ansQ3}`);
@@ -97,7 +101,7 @@ $("#continue-btn").on("click", function (event) {
       date: currentDate,
       dayId: dayId,
       mood: mood,
-      color: moodVal,
+      color: color,
       questionA: Q1Val,
       questionB: Q2Val,
       questionC: Q3Val,

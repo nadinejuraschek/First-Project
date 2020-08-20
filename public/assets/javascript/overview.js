@@ -1,28 +1,44 @@
 $(document).ready(function () {
+    // display current month and year in header
+    let currentDate = moment();
+    let entries = [];
+    let displayEntries = [];
+    let year = moment().format("YYYY");
+    let month = moment().format("MMM");
+    $(".display-date").html(moment().format("MMMM YYYY"));
+
     $.ajax({
         url: "/api/user/:id/entries",
         method: "GET",
-        async: true,
+        async: false,
         dataType: "json",
     }).done(function(data) {
-        data.map(day => {
-            console.log(day.fieldId);
-            $(`.${day.fieldId}`).css({backgroundColor: `#${day.color}`});
+        // create mood graph
+        createGraph();
+        data.map(entry => {
+            $(`.${entry.dayId}`).css({ backgroundColor: `${entry.color}` });
+            if (moment(entry.date).format("YYYY") === year) {
+                if (moment(entry.date).format("MMM") === month) {
+                    displayEntries.push(entry);
+                };
+            };
+        });
+        displayEntries.map(day => {
+            console.log(day);
+            let row = `<tr><td class="tracker-table-date" style="background-color: ${day.color}">${moment(day.date).format("DD")}</td><td class="tracker-table-comments">${day.comment}</td></tr>`;
+            $(".tracker-table-body").append(row);
         });
     });
-
-    // display current month and year in header
-    let currentDate = moment().format("MMMM YYYY");
-    let year = new Date().getFullYear();
-    $(".display-date").html(currentDate);
 
     // change month to diplay logs
     $("#prev-month").on("click", function() {
         prevMonth();
+        getDisplayEntries(currentDate);
     });
 
     $("#next-month").on("click", function() {
         nextMonth();
+        getDisplayEntries(currentDate);
     });
 
     function prevMonth() {
@@ -35,8 +51,17 @@ $(document).ready(function () {
         $(".display-date").html(currentDate);
     };
 
-    // create mood graph
-    createGraph();
+    function getDisplayEntries(day) {
+        displayEntries = [];
+        entries.map(entry => {
+            if (moment(entry.date).format("YYYY") === moment(day).format("YYYY")) {
+                if (moment(entry.date).format("MMM") === moment(day).format("MMM")) {
+                    displayEntries.push(entry);
+                    console.log(displayEntries);
+                };
+            };
+        });
+    };
 
     function createGraph() {
         // create one square for each day of the year

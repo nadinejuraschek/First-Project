@@ -58,17 +58,7 @@ router.get('/overview', isLoggedIn,  function(req, res){
 // ENTRY API ROUTES
 router.get("/api/user/:id/entries", isLoggedIn, function(req, res) {
     User.findById(req.user.id).populate('entries').then(function(data){
-        const entries = data.entries;
-        const graphData = [];
-        for (let i = 0; i < entries.length; i++) {
-            entries.map(entry => {
-                let dayId = entry.dayId;
-                let graphColor = entry.color;
-                let graphField = { fieldId: dayId, color: graphColor };
-                graphData.push(graphField);
-            });
-        };
-        res.json(graphData);
+        res.json(data.entries);
     });
 })
 

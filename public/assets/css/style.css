@@ -321,19 +321,19 @@ nav {
   margin-top: 1rem;
 }
 #exhilirated {
-  background-color: #9fee5f;
+  background-color: #C1EAF1;
 }
 #happy {
-  background-color: #c0eba3;
+  background-color: #A3E0EB;
 }
 #moderate {
-  background-color: #f9b38d;
+  background-color: #8FDAE7;
 }
 #sad {
-  background-color: #76b3be;
+  background-color: #76B3BE;
 }
 #depressed {
-  background-color: #2d484d;
+  background-color: #5C8B93;
 }
 .question {
   font-size: 1.5rem;
@@ -431,8 +431,21 @@ nav {
   width: 210px;
 }
 
+.table-div {
+  width: 100%;
+}
+
 #tracker-table {
   margin: 24px auto;
+  width: 100%;
+}
+
+#tracker-table td {
+  padding: 1rem;
+}
+
+.tracker-table-date {
+  width: 50px;
 }
 
 #category {
