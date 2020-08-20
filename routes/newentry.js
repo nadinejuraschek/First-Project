@@ -8,21 +8,21 @@ const   express     = require('express');
 
 
 // INDEX - show all entries
-router.get('/overview', isLoggedIn, function(req, res) {
-    // get all entries from DB
-    const perPage = 7;
-    const pageQuery = parseInt(req.query.page);
-    const pageNum = pageQuery ? pageQuery : 1;
-    Log.find({}).skip((perPage * pageNum) - perPage).limit(perPage).exec(function(err, allLogs){
-      Log.count().exec(function(err, count) {
-        if(err){
-          console.log("Error: " + err);
-        } else {
-          res.render('overview', { title: 'Overview', logs: allLogs, current: pageNum, pages: Math.ceil(count / perPage) });
-        };
-      });
-    });
-});
+// router.get('/overview', isLoggedIn, function(req, res) {
+//     // get all entries from DB
+//     const perPage = 7;
+//     const pageQuery = parseInt(req.query.page);
+//     const pageNum = pageQuery ? pageQuery : 1;
+//     Log.find({}).skip((perPage * pageNum) - perPage).limit(perPage).exec(function(err, allLogs){
+//       Log.count().exec(function(err, count) {
+//         if(err){
+//           console.log("Error: " + err);
+//         } else {
+//           res.render('overview', { title: 'Overview', logs: allLogs, current: pageNum, pages: Math.ceil(count / perPage) });
+//         };
+//       });
+//     });
+// });
 
 // CREATE - add entry to DB
 // router.post('/overview', isLoggedIn, function(req, res) {

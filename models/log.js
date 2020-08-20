@@ -2,6 +2,7 @@ const   mongoose = require('mongoose');
 
 const LogSchema = new mongoose.Schema({
     date: String,
+    dayId: String,
     mood: String,
     color: String,
     questionA: String,

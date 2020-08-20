@@ -1,4 +1,16 @@
 $(document).ready(function () {
+    $.ajax({
+        url: "/api/user/:id/entries",
+        method: "GET",
+        async: true,
+        dataType: "json",
+    }).done(function(data) {
+        data.map(day => {
+            console.log(day.fieldId);
+            $(`.${day.fieldId}`).css({backgroundColor: `#${day.color}`});
+        });
+    });
+
     // display current month and year in header
     let currentDate = moment().format("MMMM YYYY");
     let year = new Date().getFullYear();

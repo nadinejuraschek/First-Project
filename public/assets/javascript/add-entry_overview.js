@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // get current date
-  var currentDate = moment().format("MMMM Do, YYYY");
+  var currentDate = moment().format("MMM YYYY");
   console.log("Today is: " + currentDate);
   var mood = "";
   var color = "";
@@ -79,9 +79,6 @@ $(document).ready(function () {
     console.log("answer #1 stored in database: " + ansQ2);
     console.log("answer #1 stored in database: " + ansQ3);
     console.log("user comments: " + comment);
-
-    // redirect user
-    window.location.replace("overview.html");
   });
 
   /****************************

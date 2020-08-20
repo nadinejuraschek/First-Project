@@ -25,7 +25,10 @@ const questions = [
 
 // get current date
 const currentDateDisplay = moment().format("MMMM Do, YYYY");
-const currentDate = moment().format('MM/DD/YYYY');
+const currentDate = moment()._d;
+const dayId = `${moment().format("YYYY")}-${moment().dayOfYear()}`;
+// console.log(currentDate);
+// console.log(dayId);
 console.log("Today is: " + currentDateDisplay);
 let mood = "";
 let moodVal = "";
@@ -92,6 +95,7 @@ $("#continue-btn").on("click", function (event) {
     // create entry in db
     let newLog = {
       date: currentDate,
+      dayId: dayId,
       mood: mood,
       color: moodVal,
       questionA: Q1Val,
@@ -106,7 +110,8 @@ $("#continue-btn").on("click", function (event) {
       method: "POST",
       data: newLog
     }).then(function () {
-      window.location.href = ('/overview');
+      // redirect user
+      window.location.replace("overview.html");
     }).catch(function(err) {
       throw (err);
     });

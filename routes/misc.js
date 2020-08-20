@@ -40,11 +40,37 @@ router.get('/overview', isLoggedIn,  function(req, res){
     // console.log(req.user.id);
     User.findById(req.user.id).populate('entries').then(function(data){
         // TEST
-        // console.log(data.entries);
         const entries = data.entries;
-        res.render('overview', { title: 'Overview', currentUser: req.user.username, entries: entries });
+        const graphData = [];
+        for (let i = 0; i < entries.length; i++) {
+            entries.map(entry => {
+                let date = entry.date.split('/');
+                let graphId = `${date[2]}-${date[1]}`;
+                let graphColor = entry.color;
+                let graphField = { fieldId: graphId, color: graphColor };
+                graphData.push(graphField);
+            });
+        };
+        res.render('overview', { title: 'Overview', currentUser: req.user.username, entries: entries, graphData: graphData });
     });
 });
+
+// ENTRY API ROUTES
+router.get("/api/user/:id/entries", isLoggedIn, function(req, res) {
+    User.findById(req.user.id).populate('entries').then(function(data){
+        const entries = data.entries;
+        const graphData = [];
+        for (let i = 0; i < entries.length; i++) {
+            entries.map(entry => {
+                let dayId = entry.dayId;
+                let graphColor = entry.color;
+                let graphField = { fieldId: dayId, color: graphColor };
+                graphData.push(graphField);
+            });
+        };
+        res.json(graphData);
+    });
+})
 
 router.post('/overview', isLoggedIn, function(req, res) {
     // create new entry and save to DB
