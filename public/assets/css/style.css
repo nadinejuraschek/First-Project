@@ -94,7 +94,7 @@ nav {
   background-color: #ffffff;
   border-bottom: 2px solid rgba(34, 36, 38, 0.15);
   border-left: 2px solid rgba(34, 36, 38, 0.15);
-  width: 30%;
+  width: 50%;
 
   display: none;
 
@@ -122,6 +122,10 @@ nav {
 
   .menu {
     display: block;
+  }
+
+  #menu-dropdown {
+    width: 30%;
   }
 }
 
@@ -406,7 +410,13 @@ nav {
 .overview-containter {
   padding: 24px;
   margin: 0 auto;
+
+  min-height: calc(100vh - 152px);
   max-width: 1200px;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .date-controller {
@@ -444,8 +454,13 @@ nav {
   padding: 1rem;
 }
 
-.tracker-table-date {
+.tracker-table-date, .tracker-table-header-date {
   width: 50px;
+}
+
+.tracker-table-date {
+  font-size: 3rem;
+  text-align: center;
 }
 
 #category {
@@ -454,14 +469,14 @@ nav {
   font-weight: 700;
 }
 
-.answers,
+/* .answers,
 .comment {
   line-height: 2rem;
-}
+} */
 
 .graph-container {
   margin-bottom: 4rem;
-  width: calc(100% - 6rem);
+  width: 100%;
 }
 
 .graph {
