@@ -1,7 +1,7 @@
 {
   "name": "moodsphere",
   "version": "1.0.0",
-  "description": "### Team of Developers * [Nadine Juraschek](https://github.com/nadinejuraschek) * [Morgan McMilin](https://github.com/Morganatic) * [Caitlin Phillips](https://github.com/Caitlin3410) * [Loralee Smith](https://github.com/LoraleeSmith)",
+  "description": "### Team of Developers * [Nadine Pesso](https://github.com/nadinejuraschek) * [Morgan McMilin](https://github.com/Morganatic) * [Caitlin Phillips](https://github.com/Caitlin3410) * [Loralee Smith](https://github.com/LoraleeSmith)",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,21 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/nadinejuraschek/Moodsphere.git"
   },
-  "author": "Nadine Juraschek, Loralee Smith",
+  "author": "Nadine Pesso, Loralee Smith",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nadinejuraschek/Moodsphere/issues"
   },
   "homepage": "https://github.com/nadinejuraschek/Moodsphere#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.3",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "moment": "^2.24.0",
-    "mongoose": "^5.8.9",
+    "mongoose": "^6.6.3",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",

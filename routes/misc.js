@@ -6,9 +6,7 @@ const   express     = require('express'),
         Log         = require('../models/log'),
         Question    = require('../models/modal'),
         Quotes      = require('../models/quotes');
-        
 
-        
 // check if user is logged in logic
 function isLoggedIn(req, res, next){
     if (req.isAuthenticated()){
@@ -35,19 +33,17 @@ router.get('/home', isLoggedIn, function(req, res){
     res.render('home', { title: 'Home', currentUser: req.user.username });
 });
 
-router.get('/overview', isLoggedIn,  function(req, res){
+router.get('/overview', isLoggedIn, function(req, res){
     // TEST
     // console.log(req.user.id);
     User.findById(req.user.id).populate('entries').then(function(data){
-        // TEST
         const entries = data.entries;
         const graphData = [];
         for (let i = 0; i < entries.length; i++) {
             entries.map(entry => {
-                let date = entry.date.split('/');
-                let graphId = `${date[2]}-${date[1]}`;
-                let graphColor = entry.color;
-                let graphField = { fieldId: graphId, color: graphColor };
+                const graphId = entry.dayId;
+                const graphColor = entry.color;
+                const graphField = { fieldId: graphId, color: graphColor };
                 graphData.push(graphField);
             });
         };
@@ -93,8 +89,6 @@ router.get('*', function(req, res){
     res.render('error');
 });
 
-
-
 // get modal data from DB
 function getModalData(){
     console.log(mongoose.model('Modal'));
@@ -106,50 +100,5 @@ function getModalData(){
           };
     });
 };
-
-// router.post('/create', function(req, res){
-//     let newQuestion = { 
-//         moods: [
-//             "depressed",
-//             "sad",
-//             "moderate",
-//             "happy",
-//             "exhilirated"
-//         ],
-//         questions: [
-//             {
-//             question: "Do you feel hopeless?",
-//             answers: [
-//                 "Yes, all the time.",
-//                 "Yes, sometimes.",
-//                 "No."
-//             ]
-//             },
-//             {
-//             question: "Are you getting less sleep than usual?",
-//             answers: [
-//                 "Yes, I had trouble falling asleep.",
-//                 "Yes, I kept waking up at night.",
-//                 "No, I haven't noticed any differences."
-//             ]
-//             },
-//             {
-//             question: "Have you been productive today?",
-//             answers: [
-//                 "Yes, I have kept myself busy.",
-//                 "I only completed important tasks.",
-//                 "No, I don't feel like leaving the house."
-//             ]
-//             }
-//         ]
-//      };
-//      console.log(newQuestion);
-//     Question.create(newQuestion, function(err, addQuestion) {
-//       if(err) {
-//         console.log('Error: ' + err);
-//       } else {
-//         console.log(addQuestion);
-//       };
-// });    
 
 module.exports = router;
