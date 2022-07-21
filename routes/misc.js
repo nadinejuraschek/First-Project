@@ -1,104 +1,28 @@
-const   express     = require('express'),
-        router      = express.Router(),
-        mongoose    = require('mongoose'),
-        axios       = require('axios'),
-        User        = require('../models/user'),
-        Log         = require('../models/log'),
-        Question    = require('../models/modal'),
-        Quotes      = require('../models/quotes');
+const   express         = require('express'),
+        entryController  = require('../controllers/entry'),
+        htmlController  = require('../controllers/html'),
+        userController  = require('../controllers/user'),
+        router          = express.Router();
 
-// check if user is logged in logic
-function isLoggedIn(req, res, next){
-    if (req.isAuthenticated()){
-        return next();
-    }
-    res.redirect('/login');
-};
 // redirect user to /login or /home when visiting /
-router.get('/', isLoggedIn, function(req, res){
+router.get('/', userController.isLoggedIn, (req, res) => {
     res.redirect('/home');
 });
 
 // render /home, /overview, and /discover if user is signed in, otherwise redirect to /login
-router.get('/home', isLoggedIn, function(req, res){
+router.get('/home', userController.isLoggedIn, htmlController.renderHome);
 
-    // Question.find({}, function(err, data){
-    //     if(err){
-    //         console.log("Error: " + err);
-    //       } else {
-    //         console.log(data);
-    //         res.render('home', {title: 'Home', currentUser: req.user.username, modal: data});
-    //       };
-    // });
-    res.render('home', { title: 'Home', currentUser: req.user.username });
-});
-
-router.get('/overview', isLoggedIn, function(req, res){
-    // TEST
-    // console.log(req.user.id);
-    User.findById(req.user.id).populate('entries').then(function(data){
-        const entries = data.entries;
-        const graphData = [];
-        for (let i = 0; i < entries.length; i++) {
-            entries.map(entry => {
-                const graphId = entry.dayId;
-                const graphColor = entry.color;
-                const graphField = { fieldId: graphId, color: graphColor };
-                graphData.push(graphField);
-            });
-        };
-        res.render('overview', { title: 'Overview', currentUser: req.user.username, entries: entries, graphData: graphData });
-    });
-});
+router.get('/overview', userController.isLoggedIn, htmlController.renderOverview);
+router.post('/overview', userController.isLoggedIn, entryController.createEntry);
 
 // ENTRY API ROUTES
-router.get("/api/user/:id/entries", isLoggedIn, function(req, res) {
-    User.findById(req.user.id).populate('entries').then(function(data){
-        res.json(data.entries);
-    });
-})
+router.get("/api/user/:id/entries", userController.isLoggedIn, entryController.getAllEntries)
 
-router.post('/overview', isLoggedIn, function(req, res) {
-    // create new entry and save to DB
-    // TEST
-    // console.log(req.user);
-    Log.create(req.body).then(function (insertedLog) {
-        // TEST
-        // console.log(insertedLog);
-        User.findByIdAndUpdate({ _id: req.user._id }, { $push: { entries: insertedLog._id } }, function (error, success) {
-            if (error) {
-                console.log('Error: ' + error);
-            } else {
-                // TEST
-                // console.log('Success: ' + success);
-            };
-        });
-    });
-});
+router.get('/discover', userController.isLoggedIn, htmlController.renderDiscover);
 
-router.get('/discover', isLoggedIn, function(req, res){
-    res.render('discover', { title: 'Discover', currentUser: req.user.username });
-});
-
-router.get('/newentry', isLoggedIn, function(req, res){
-    res.render('newentry', { title: 'Entry', currentUser: req.user.username });
-});
+router.get('/newentry', userController.isLoggedIn, htmlController.renderNewEntry);
 
 // catch all route
-router.get('*', function(req, res){
-    res.render('error');
-});
-
-// get modal data from DB
-function getModalData(){
-    console.log(mongoose.model('Modal'));
-    Modal.find({}, function(err, modalData){
-        if(err){
-            console.log("Error: " + err);
-          } else {
-            res.render('/home', { modal: modalData });
-          };
-    });
-};
+router.get('*', htmlController.renderCatchAllRoute);
 
 module.exports = router;
