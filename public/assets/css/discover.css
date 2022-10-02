@@ -1,3 +1,28 @@
+/*******************************
+COLORS
+*******************************/
+:root {
+  --exhilirated: #C1EAF1;
+  --happy: #A3E0EB;
+  --moderate: #8FDAE7;
+  --sad: #76B3BE;
+  --depressed: #5C8B93;
+
+  --primary: #8FDAE7;
+  --primary__dark: #61afbd;
+  --secondary: #ff9665;
+  --secondary__dark: #D9532D;
+  --secondary__light: #F9B38D;
+  --tertiary: #353e63;
+
+  --text: #454E45;
+  --text__dark: #161E18;
+  --text__light: #A9ABAA;
+
+  --background: #ffffff;
+  --background__secondary: #F5EFEA;
+}
+
 /*****************************
   DISCOVER
 *****************************/
@@ -36,16 +61,16 @@
   display: none;
   border: none;
   border-radius: .28571429rem;
-  box-shadow: 1px 1px 2px #454e45;
+  box-shadow: 1px 1px 2px var(--text);
   padding: 1rem;
 
-  color: #161e18;
+  color: var(--text__dark);
   height: 180px;
   width: 100%;
 }
 
 .discover-card:hover {
-  color: #161e18;
+  color: var(--text__dark);
   cursor: pointer;
 }
 
@@ -78,7 +103,7 @@
 .discover-dots .dot {
   background-color: #dddddd;
   border-radius: 50%;
-  box-shadow: 1px 1px 2px #454e45;
+  box-shadow: 1px 1px 2px var(--text);
   height: 10px;
   width: 10px;
 }

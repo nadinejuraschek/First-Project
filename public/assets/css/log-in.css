@@ -1,3 +1,28 @@
+/*******************************
+COLORS
+*******************************/
+:root {
+  --exhilirated: #C1EAF1;
+  --happy: #A3E0EB;
+  --moderate: #8FDAE7;
+  --sad: #76B3BE;
+  --depressed: #5C8B93;
+
+  --primary: #8FDAE7;
+  --primary__dark: #61afbd;
+  --secondary: #ff9665;
+  --secondary__dark: #D9532D;
+  --secondary__light: #F9B38D;
+  --tertiary: #353e63;
+
+  --text: #454E45;
+  --text__dark: #161E18;
+  --text__light: #A9ABAA;
+
+  --background: #ffffff;
+  --background__secondary: #F5EFEA;
+}
+
 .auth-form {
   display: flex;
   flex-direction: column;
@@ -19,7 +44,7 @@
 }
 
 .ui.button {
-  background-color: #f9b38d;
+  background-color: var(--secondary__light);
 }
 
 .ui.button:hover {
@@ -27,12 +52,12 @@
 }
 
 .ui.segment {
-  background-color: #353e63;
+  background-color: var(--tertiary);
   border-radius: 0.8rem;
 }
 
 .ui.input {
-  color: #f9b38d;
+  color: var(--secondary__light);
 }
 
 .image {
@@ -59,7 +84,7 @@
 }
 
 .login-heading {
-  color: #61afbd;
+  color: var(--primary__dark);
   display: inline-block;
   font-family: 'Fira Sans', sans-serif;
   font-size: 3rem;
@@ -69,7 +94,7 @@
 
 .message {
   background-color: transparent;
-  color: #ffffff;
+  color: var(--background);
   font-size: 1rem;
   margin-top: 1rem;
   padding: 1rem 1.5rem;
@@ -77,17 +102,17 @@
 }
 
 .divider-line {
-  color: #61afbd;
+  color: var(--primary__dark);
   font-weight: 800;
   margin: 0 1.5rem;
 }
 .copyright {
-  color: #61afbd;
+  color: var(--primary__dark);
   font-size: 0.8rem;
   margin: 1rem auto 1.5rem;
 }
 .login-link {
-  color: #f9b38d;
+  color: var(--secondary__light);
   font-size: 2rem;
   font-weight: 800;
 }
@@ -98,24 +123,24 @@
   margin-bottom: 2rem;
 }
 .message-link {
-  color: #f9b38d;
+  color: var(--secondary__light);
   cursor: pointer;
   margin-left: 0.5rem;
 }
 .message-link:hover {
-  color: #f9b38d;
+  color: var(--secondary__light);
   font-weight: bold;
 }
 
 .footer {
-  background-color: #ffffff;
+  background-color: var(--background);
   height: 6.5rem;
   margin-top: 4rem;
   width: 100%;
 }
 
 a.item {
-  color: #61afbd;
+  color: var(--primary__dark);
 }
 
 @media only screen and (min-width: 450px) {
