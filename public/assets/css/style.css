@@ -321,6 +321,9 @@ nav {
   height: 4.5rem;
   width: 4.5rem;
 }
+.mood:hover {
+  outline: 4px solid #f9b38d;
+}
 .button-clicked {
   height: 7rem;
   width: 7rem;
@@ -352,7 +355,8 @@ nav {
 .answer-opt-1,
 .answer-opt-2,
 .answer-opt-3 {
-  border: 3px solid #f9b38d;
+  background-color: #f9b38d60;
+  border: 3px solid #f9b38d60;
   border-radius: 10px;
   color: #000;
   cursor: pointer;
@@ -368,6 +372,7 @@ nav {
 .answer-opt-3:hover,
 .answer-selected {
   background-color: #f9b38d;
+  border-color: #f9b38d;
 }
 .modal-btn {
   background-color: #61afbd;
