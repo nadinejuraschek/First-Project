@@ -1,19 +1,18 @@
 // NPM PACKAGES
 require('dotenv').config();
 const   express         = require('express'),
+        chalk           = require('chalk'),
         path            = require('path'),
         mongoose        = require('mongoose'),
         passport        = require('passport'),
         LocalStrategy   = require('passport-local'),
-        ejs             = require('ejs'),
         favicon         = require('serve-favicon'),
-        app             = express(),
         User            = require('./models/user'),
-        Log             = require('./models/log');
+        app             = express();
 
 // ROUTES
 const miscRoutes        = require('./routes/misc'),
-      newentryRoutes    = require('./routes/newentry'),
+      entryRoutes       = require('./routes/entry'),
       userRoutes        = require('./routes/user');
 
 // MONGODB
@@ -48,10 +47,9 @@ passport.deserializeUser(User.deserializeUser());
 // SERVER
 // ============================
 app.use(userRoutes);
+app.use(entryRoutes);
 app.use(miscRoutes);
-app.use(newentryRoutes);
 
-// server logic
-app.listen(process.env.PORT, function(){
-    console.log('Server is listening on PORT ' + process.env.PORT + '.');
+app.listen(process.env.PORT, () => {
+    console.log(chalk.green('Server is listening on PORT ' + process.env.PORT + '.'));
 });
